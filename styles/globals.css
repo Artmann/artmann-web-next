@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300&display=swap');
+
+html,
+body {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  @apply leading-relaxed text-gray-700;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.brand {
+  font-family: 'Anton', sans-serif;
+}
+
+.article-content p, .article-content pre, .article-content img, .article-content iframe, h1, h2, h3, h4 {
+  @apply max-w-full mt-8;
+}
+
+.article-content img, .article-content iframe {
+  @apply block mx-auto;
+}
+
+.article-content pre {
+  color: #dcd6b0;
+
+  @apply bg-gray-900 shadow-lg px-4 py-6 text-sm overflow-x-auto break-all;
+}
