@@ -67,11 +67,11 @@ export default function Home({ articles }: HomeProps): ReactElement {
     <Container>
 
       <div className="flex flex-col justify-center mb-8 md:border-b-2 md:border-pink-500 md:flex-row">
-        { [ firstArticle, secondArticle ].map(article => <FeaturedArticle article={ article } />) }
+        { [ firstArticle, secondArticle ].map(article => <FeaturedArticle article={ article } key={ article.title } />) }
       </div>
 
       <div>
-        { restOfArticles.map(article => <ArticleItem article={ article } />) }
+        { restOfArticles.map(article => <ArticleItem article={ article } key={ article.title } />) }
       </div>
 
     </Container>
