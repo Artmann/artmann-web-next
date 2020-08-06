@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { ReactElement } from 'react';
 
@@ -11,7 +11,7 @@ interface HomeProps {
   articles: Article[];
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const articles = await loadArticles();
 
   return {
