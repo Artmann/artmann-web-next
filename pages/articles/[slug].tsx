@@ -1,6 +1,7 @@
+import { DiscussionEmbed } from 'disqus-react';
+import hljs from 'highlight.js';
 import marked from 'marked';
 import moment from 'moment';
-import hljs from 'highlight.js';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router'
 import { ReactElement } from 'react';
@@ -56,6 +57,12 @@ export default function ArticlePage({ articles }: ArticlePageProps): ReactElemen
   const { slug } = router.query;
   const article = articles.find(a => articleService.getSlug(a) === slug.toString().toLowerCase())
 
+  const disqusConfig = {
+    identifier: articleService.getSlug(article),
+    title: article.title,
+    url: `https://www.artmann.co${router.asPath}`
+  };
+
   return (
     <Container>
       <article className="w-full text-gray-700 leading-relaxed">
@@ -85,6 +92,13 @@ export default function ArticlePage({ articles }: ArticlePageProps): ReactElemen
           }></div>
 
       </article>
+
+      <div>
+      <DiscussionEmbed
+        shortname='artmann'
+        config={ disqusConfig }
+      />
+      </div>
     </Container>
   );
 }
