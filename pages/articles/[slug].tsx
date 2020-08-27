@@ -55,7 +55,7 @@ function renderMarkdown(markdown: string): string {
 export default function ArticlePage({ articles }: ArticlePageProps): ReactElement {
   const router = useRouter();
   const { slug } = router.query;
-  const article = articles.find(a => articleService.getSlug(a) === slug.toString().toLowerCase())
+  const article = articles.find(a => articleService.getSlug(a) === slug);
 
   const disqusConfig = {
     identifier: articleService.getSlug(article),

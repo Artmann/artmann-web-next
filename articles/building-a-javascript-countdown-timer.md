@@ -1,5 +1,5 @@
 ---
-title: Waiting for network resources in Cypress
+title: Building a Javascript Countdown Timer
 blurb: How to build a countdown timer for your app.
 imageUrl: https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/143906/1160/772/m1/fpnw/wm0/countdown-.jpg?1405488906&s=d823af9c9b2e2d281f92ab3238b6a4ed
 publishedAt: 2018-11-26
