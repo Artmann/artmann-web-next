@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { join } from 'path';
 
 import { Article, ArticleStatus } from '.';
+import { parseDate } from '../date';
 
 export async function loadArticles(): Promise<Article[]> {
   const aritcleBasePath = join(process.cwd(), 'articles');
@@ -25,5 +26,5 @@ export async function loadArticles(): Promise<Article[]> {
 
   return articles
     .filter(article => article.status === ArticleStatus.Published)
-    //.sort((a, b) => dayjs(b.publishedAt).unix() - dayjs(a.publishedAt).unix());
+    .sort((a, b) => parseDate(b.publishedAt).unix() > parseDate(a.publishedAt).unix() ? 1 : -1);
 }
