@@ -1,4 +1,3 @@
-import moment from 'moment';
 import { GetStaticProps } from 'next';
 import Head from 'next/head'
 import Link from 'next/link';
@@ -7,6 +6,7 @@ import { ReactElement } from 'react';
 import Container from '../components/container';
 import { Article, articleService } from '../lib/article-service';
 import { loadArticles } from '../lib/article-service/article-loader';
+import { parseDate } from '../lib/date';
 
 interface HomeProps {
   articles: Article[];
@@ -54,7 +54,7 @@ function ArticleItem({ article } : { article: Article } ): ReactElement {
           </h2>
         </Link>
         <p className="py-2 text-sm text-gray-600">
-          { moment(article.publishedAt, 'DD-MM-YYYY').format('MMMM DD, YYYY') }
+          { parseDate(article.publishedAt).format('MMMM DD, YYYY') }
         </p>
       </div>
     </div>

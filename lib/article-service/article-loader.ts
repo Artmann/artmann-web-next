@@ -1,6 +1,6 @@
+import dayjs from 'dayjs';
 import { promises as fs } from 'fs';
 import matter from 'gray-matter';
-import moment from 'moment';
 import { join } from 'path';
 
 import { Article, ArticleStatus } from '.';
@@ -16,7 +16,7 @@ export async function loadArticles(): Promise<Article[]> {
   const articles = documents.map((document): Article => ({
     blurb: document.data.blurb,
     imageUrl: document.data.imageUrl,
-    publishedAt: moment(document.data.publishedAt).format('DD-MM-YYYY'),
+    publishedAt: dayjs(document.data.publishedAt).format('YYYY-MM-DD'),
     status: document.data.status === 'Published' ? ArticleStatus.Published : ArticleStatus.Draft,
     tags: document.data.tags.split(',').map((tag: string) => tag.trim()),
     text: document.content,
@@ -25,5 +25,5 @@ export async function loadArticles(): Promise<Article[]> {
 
   return articles
     .filter(article => article.status === ArticleStatus.Published)
-    //.sort((a, b) => moment(b.publishedAt).unix() - moment(a.publishedAt).unix());
+    //.sort((a, b) => dayjs(b.publishedAt).unix() - dayjs(a.publishedAt).unix());
 }

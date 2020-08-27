@@ -1,13 +1,13 @@
 ---
 title: String Concatenation Cheat Sheet
-blurb: Your one resource for String Concatenation.
+blurb: Your one resource for String Concatenation in different languages.
 imageUrl: https://portswigger.net/cms/images/ac/27/96b3f5eb000e-article-xss-cheat-sheet-article.png
 publishedAt: 2017-02-10
 status: Published
 tags: Strings
 ---
 
-When switching between languages I often find my self googling how to do string concatenation and especially interpolation which no two language seems to agree on.
+When switching between languages I often find my self Googling on how to do string concatenation and especially interpolation which no two languages seems to agree on.
 
 For future reference, Here's how you do it.
 

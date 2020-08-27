@@ -1,7 +1,6 @@
 import { DiscussionEmbed } from 'disqus-react';
 import hljs from 'highlight.js';
 import marked from 'marked';
-import moment from 'moment';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router'
@@ -10,6 +9,7 @@ import { ReactElement } from 'react';
 import Container from '../../components/container';
 import { articleService, Article } from '../../lib/article-service';
 import { loadArticles } from '../../lib/article-service/article-loader';
+import { parseDate } from '../../lib/date';
 
 interface ArticlePageProps {
   articles: Article[];
@@ -93,7 +93,7 @@ export default function ArticlePage({ articles }: ArticlePageProps): ReactElemen
           </p>
 
           <p className="mb-8 text-sm text-gray-600">
-            { moment(article.publishedAt, 'DD-MM-YYYY').format('MMMM DD, YYYY') }
+            { parseDate(article.publishedAt).format('MMMM DD, YYYY') }
           </p>
         </header>
 

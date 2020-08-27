@@ -1,9 +1,9 @@
-import moment from 'moment';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { SitemapStream, streamToPromise } from 'sitemap';
 
 import { loadArticles } from '../../lib/article-service/article-loader';
 import { articleService } from '../../lib/article-service';
+import { parseDate } from '../../lib/date';
 
 export default async(request: NextApiRequest, response: NextApiResponse): Promise<void> => {
   const articles = await loadArticles();
@@ -23,7 +23,7 @@ export default async(request: NextApiRequest, response: NextApiResponse): Promis
   articles.forEach(article => {
     stream.write({
       url: articleService.getPath(article),
-      lastmod: moment(article.publishedAt, 'DD-MM-YYYY').toISOString()
+      lastmod: parseDate(article.publishedAt).toISOString()
     });
   });
 
