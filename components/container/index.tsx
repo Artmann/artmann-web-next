@@ -1,4 +1,6 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, Fragment } from 'react';
+
+import Footer from '../footer';
 import Header from '../header';
 
 interface ContainerProps {
@@ -7,10 +9,14 @@ interface ContainerProps {
 
 export default function Container(props: ContainerProps): ReactElement {
   return (
-    <div className="container mx-auto p-4 pb-16 md:py-8 max-w-4xl">
-      <Header />
+    <Fragment>
+      <div className="container mx-auto p-4 pb-8 md:py-8 max-w-4xl">
+        <Header />
 
-      { props.children }
-    </div>
+        { props.children }
+      </div>
+
+      <Footer />
+    </Fragment>
   );
 }

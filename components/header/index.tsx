@@ -26,13 +26,6 @@ export default function Header(): ReactElement {
             </a>
           </Link>
         </div>
-        <div className="mx-2">
-          <Link href="/about">
-            <a className="hover:underline">
-              About
-            </a>
-          </Link>
-        </div>
       </div>
     </nav>
   );
