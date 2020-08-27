@@ -15,7 +15,7 @@ export default function Header(): ReactElement {
         <img
           alt="Christoffer Artmann"
           className="w-16 h-16 rounded-full shadow-lg md:w-24 md:h-24"
-          src="/images/christoffer-artmann.png"
+          src="/images/christoffer-artmann.jpg"
           />
       </div>
       <div>
