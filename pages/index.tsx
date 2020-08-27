@@ -1,5 +1,6 @@
 import moment from 'moment';
 import { GetStaticProps } from 'next';
+import Head from 'next/head'
 import Link from 'next/link';
 import { ReactElement } from 'react';
 
@@ -65,6 +66,10 @@ export default function Home({ articles }: HomeProps): ReactElement {
 
   return (
     <Container>
+
+      <Head>
+        <title>Christoffer Artmann</title>
+      </Head>
 
       <div className="flex flex-col justify-center mb-8 md:border-b-2 md:border-pink-500 md:flex-row">
         { [ firstArticle, secondArticle ].map(article => <FeaturedArticle article={ article } key={ article.title } />) }

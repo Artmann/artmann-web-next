@@ -3,6 +3,7 @@ import hljs from 'highlight.js';
 import marked from 'marked';
 import moment from 'moment';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import { useRouter } from 'next/router'
 import { ReactElement } from 'react';
 
@@ -65,6 +66,22 @@ export default function ArticlePage({ articles }: ArticlePageProps): ReactElemen
 
   return (
     <Container>
+      <Head>
+        <title>{ article.title }</title>
+        <meta name="description" content={ article.blurb } />
+
+        <meta property="og:title" content={ article.title } />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={ article.blurb } />
+        <meta property="og:image" content={ article.imageUrl } />
+
+
+        <meta property="twitter:title" content={ article.title } />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:description" content={ article.blurb } />
+        <meta property="twitter:image" content={ article.imageUrl } />
+      </Head>
+
       <article className="w-full text-gray-700 leading-relaxed">
         <header>
           <h1 className="text-3xl mb-4">

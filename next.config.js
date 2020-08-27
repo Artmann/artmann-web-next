@@ -4,7 +4,7 @@ module.exports = {
       {
         source: '/sitemap.xml',
         destination: '/api/sitemap',
-      },
+      }
     ];
   },
 };

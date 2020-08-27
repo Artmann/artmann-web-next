@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { ReactElement } from 'react';
 
 import Container from '../components/container';
@@ -99,6 +100,10 @@ export default function Home(): ReactElement {
 
   return (
     <Container>
+
+      <Head>
+        <title>Projects - Christoffer Artmann</title>
+      </Head>
 
       <div className="border-b border-gray-300 pb-8 mb-8">
         <h1 className="text-3xl mb-4">
