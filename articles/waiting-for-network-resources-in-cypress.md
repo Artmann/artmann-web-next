@@ -1,7 +1,7 @@
 ---
 title: Waiting for network resources in Cypress
 blurb: When you are dynamically loading resources such as Javascript and CSS, you might run into timing issues. Here we take a look at what we can do to combat those issues.
-imageUrl: https://static1.squarespace.com/static/57adee9546c3c4f7faf94b98/t/58d80b2c1b10e366b42a0760/1490553658179/Cypress+Creek+dave+hensley.jpg?format=1500w
+imageUrl: https://thepracticaldev.s3.amazonaws.com/i/gvef5c5trkkaf09me6h0.jpg
 publishedAt: 2019-06-20
 status: Published
 tags: Javascript, Cypress, Performance, Testing
