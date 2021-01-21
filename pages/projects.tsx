@@ -82,7 +82,8 @@ export default function Home(): ReactElement {
       name: 'Esix',
       github: 'Artmann/esix',
       description: 'A really slick ORM for MongoDB.',
-      icon: icons.typescript
+      icon: icons.typescript,
+      homepage: 'https://esix.netlify.app/'
     },
     {
       name: 'Fuzzy Comparison',
