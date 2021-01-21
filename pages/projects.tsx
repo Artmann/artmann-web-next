@@ -8,6 +8,8 @@ interface Library {
   github: string;
   icon: string;
   name: string;
+  
+  homepage?: string;
 }
 
 interface LibraryItemProps {
@@ -16,6 +18,14 @@ interface LibraryItemProps {
 
 function LibraryItem({ library }: LibraryItemProps): ReactElement {
   const gitHubUrl = `https://github.com/${ library.github }`;
+  
+  const Homepage = (): ReactElement | null => library.homepage  ? (
+      <p className="mb-4">
+        <a href={ library.homepage } className="text-sm text-red-500 hover:text-red-700">
+          { library.homepage }
+        </a>
+      </p>
+  ) : null;
 
   return (
     <div className="mb-12">
@@ -28,6 +38,8 @@ function LibraryItem({ library }: LibraryItemProps): ReactElement {
         { library.description }
       </p>
 
+      <Homepage />
+      
       <p className="mb-4">
         <a href={ gitHubUrl } className="text-sm text-red-500 hover:text-red-700">
           { gitHubUrl }
