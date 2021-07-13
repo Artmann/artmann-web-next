@@ -82,13 +82,13 @@ export default function ArticlePage({ articles }: ArticlePageProps): ReactElemen
         <meta property="twitter:image" content={ article.imageUrl } />
       </Head>
 
-      <article className="w-full text-gray-700 leading-relaxed">
+      <article className="w-full text-gray-700 leading-loose">
         <header>
           <h1 className="text-3xl mb-4">
             { article.title }
           </h1>
 
-          <p className="text-xl text-gray-600 mb-4">
+          <p className="text-xl text-gray-700 mb-4">
             { article.blurb }
           </p>
 
@@ -99,12 +99,12 @@ export default function ArticlePage({ articles }: ArticlePageProps): ReactElemen
 
         <img
           alt={ article.title }
-          className="w-full h-auto border-gray-300 shadow-lg mb-8 overflow-x-hidden break-words"
+          className="w-full h-auto border-gray-300 shadow-lg mb-16 overflow-x-hidden break-words"
           src={ article.imageUrl }
           />
 
         <div
-          className="article-content text-xl leading-relaxed pb-16"
+          className="article-content text-xl leading-loose pb-16"
           dangerouslySetInnerHTML={{ __html: renderMarkdown(article.text) }
           }></div>
 

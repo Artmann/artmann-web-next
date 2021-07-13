@@ -59,3 +59,8 @@ a {
 
   @apply bg-gray-900 shadow-lg px-4 py-6 text-sm overflow-x-auto break-all;
 }
+
+.article-content ul {
+  list-style: square;
+  padding: 1rem 0rem 1rem 2rem;
+}
