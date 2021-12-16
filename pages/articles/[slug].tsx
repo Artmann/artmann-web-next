@@ -85,7 +85,7 @@ export default function ArticlePage({ articles }: ArticlePageProps): ReactElemen
       <article className="w-full text-gray-700 leading-loose">
         <header>
           <h1 className="text-3xl mb-4">
-            { article.title } test
+            { article.title } test2
           </h1>
 
           <p className="text-xl text-gray-700 mb-4">
