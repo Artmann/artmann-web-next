@@ -61,6 +61,19 @@ export default function Home(): ReactElement {
 
   const libraries: Library[] = [
     {
+      name: 'Esix',
+      github: 'Artmann/esix',
+      description: 'A really slick ORM for MongoDB.',
+      icon: icons.typescript,
+      homepage: 'https://esix.netlify.app/'
+    },
+    {
+      name: 'React Shared Storage',
+      github: 'Artmann/react-shared-storage',
+      description: 'React Shared Storage is built to be a simple way for storing state in the browsers local storage. It will keep your state synced between different components and different windows and tabs.',
+      icon: icons.react
+    },
+    {
       name: 'Blender Batch FBX Exporter',
       github: 'Artmann/blender-batch-fbx-exporter',
       description: 'This add-on lets you export your selected objects into separate FBX files which will be named according to the objects names in the hierarchy.',
@@ -71,19 +84,6 @@ export default function Home(): ReactElement {
       github: 'Artmann/correlations',
       description: 'Command line utility for calculating Pearson Correlation Coefficients.',
       icon: icons.ruby
-    },
-    {
-      name: 'Effectful',
-      github: 'Artmann/effectful',
-      description: 'The easy way to handle side effects in Redux.',
-      icon: icons.react
-    },
-    {
-      name: 'Esix',
-      github: 'Artmann/esix',
-      description: 'A really slick ORM for MongoDB.',
-      icon: icons.typescript,
-      homepage: 'https://esix.netlify.app/'
     },
     {
       name: 'Fuzzy Comparison',
