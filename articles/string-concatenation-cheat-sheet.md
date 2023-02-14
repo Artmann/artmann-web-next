@@ -1,7 +1,7 @@
 ---
 title: String Concatenation Cheat Sheet
 blurb: Your one resource for String Concatenation in different languages.
-imageUrl: https://portswigger.net/cms/images/ac/27/96b3f5eb000e-article-xss-cheat-sheet-article.png
+imageUrl: /images/covers/cheat-sheet.png
 publishedAt: 2017-02-10
 status: Published
 tags: Strings

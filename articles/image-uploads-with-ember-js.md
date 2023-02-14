@@ -1,7 +1,7 @@
 ---
 title: Image uploads with Ember.js
 blurb: Allowing your users to upload images to your application is not an unusual feature but I had to pull some of my hair before I found an approach I liked when trying to do it with Ember.
-imageUrl: https://i.imgur.com/Nu9Dodf.png
+imageUrl: /images/covers/image-upload.png
 publishedAt: 2016-02-04
 status: Published
 tags: Ember, Javascript

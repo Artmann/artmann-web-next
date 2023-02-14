@@ -1,7 +1,7 @@
 ---
 title: Adding Tailwind CSS to Your Rails App
 blurb: I recently started using Tailwind CSS and it really struck a chord with me. Here's how you add it to your Rails App.
-imageUrl: https://i.guim.co.uk/img/media/be7228859d2614703c64dc0d1b010e13cb28da70/464_279_1584_951/master/1584.jpg?w=1280&h=720&q=55&auto=format&usm=12&fit=max&s=a61dfb9e4148f743af6b7a7760c736c2
+imageUrl: /images/covers/tailwind-rails.png
 publishedAt: 2018-01-10
 status: Published
 tags: CSS, Ruby on Rails, Tailwind CSS, Post CSS

@@ -1,7 +1,7 @@
 ---
 title: Vertically Center Content with CSS on Mobile Devices
 blurb: You don't have to spend much time working with CSS until you run into the famous problem of trying to center something along the vertical axis. Thanks to Flexbox, it has become a lot easier to work with but it still has its challenges.
-imageUrl: /images/vertically-center-content-with-css/header.png
+imageUrl: /images/covers/stacked-boxes.png
 publishedAt: 2021-07-13
 status: Published
 tags: CSS, Layout, Flex
