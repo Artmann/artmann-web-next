@@ -30,9 +30,7 @@ function FeaturedArticle({ article } : { article: Article } ): ReactElement {
       <div>
         <Link href={ articleService.getPath(article) }>
           <h2 className="cursor-pointer text-lg m-0">
-            <a>
-              { article.title }
-            </a>
+            { article.title }
           </h2>
         </Link>
       </div>
@@ -48,9 +46,7 @@ function ArticleItem({ article } : { article: Article } ): ReactElement {
       <div>
         <Link href={ articleService.getPath(article) }>
           <h2 className="cursor-pointer text-lg m-0">
-            <a>
-              { article.title }
-            </a>
+            { article.title }
           </h2>
         </Link>
         <p className="py-2 text-sm text-gray-600">

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 
-export default function Header(): ReactElement {
+export default function Footer(): ReactElement {
   const socials = [
     { icon: FiGithub, url: 'https://github.com/artmann/' },
     { icon: FiInstagram, url: 'https://www.instagram.com/christofferartmann/' },

@@ -1,5 +1,5 @@
 ---
-title: Image uploads with Ember.js
+title: Benchmarking Rails Server Software
 blurb: Diving in to some performance benchmarks between Apache + Passenger and Nginx + Puma.
 imageUrl: https://i.imgur.com/IMmUcTP.jpg
 publishedAt: 2015-03-27

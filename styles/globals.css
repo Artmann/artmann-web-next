@@ -2,23 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300&display=swap');
-
 html,
 body {
   font-size: 16px;
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   @apply leading-relaxed text-gray-700;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 h1 {
@@ -43,7 +40,8 @@ a {
 }
 
 .brand {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 .article-content p, .article-content pre, .article-content img, .article-content iframe, h1, h2, h3, h4 {
