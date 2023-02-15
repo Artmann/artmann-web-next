@@ -1,7 +1,7 @@
 ---
 title: My impressions from World Hosting Days 2014
 blurb: I've just spent a few days at Europa Park attending the World Hosting days. The days were filled with interesting talks and I'll try to summarize the major themes in this post.
-imageUrl: https://i.imgur.com/hXh7vNx.jpg
+imageUrl: /images/covers/conference.png
 publishedAt: 2014-04-03
 status: Published
 tags: Hosting, Conference
@@ -39,4 +39,3 @@ While automated deployment and provisioning continue to grow and PaaS and SaaS a
 ## Focus on the things you are good at and do them better
 
 Identify the parts of your business that you do the best, focus on these and partner up with top actors in your edge areas.
-

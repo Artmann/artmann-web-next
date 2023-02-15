@@ -10,7 +10,10 @@ export default function Footer(): ReactElement {
   ];
 
   return (
-    <div className="flex flex-col bg-red-700 text-white p-16 justify-center items-center text-center mt-8">
+    <div
+      className="flex flex-col text-white p-16 justify-center items-center text-center mt-8"
+      style={{ background: '#71222f' }}
+    >
       <div className="flex-shrink-0 mb-4">
         <img
           alt="Christoffer Artmann"
