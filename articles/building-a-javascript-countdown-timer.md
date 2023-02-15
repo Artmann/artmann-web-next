@@ -1,6 +1,6 @@
 ---
 title: Building a Javascript Countdown Timer
-blurb: How to build a countdown timer for your app.
+blurb: Learn how to build a countdown timer for your app using Javascript.
 imageUrl: /images/covers/countdown-timer.png
 publishedAt: 2018-11-26
 status: Published
@@ -12,21 +12,21 @@ How do you build a countdown timer for your app that allows you to pause it and 
 <p data-height="265" data-theme-id="light" data-slug-hash="qQqbOa" data-default-tab="result" data-user="Artmann" data-pen-title=" Countdown Timer" class="codepen">See the Pen <a href="https://codepen.io/Artmann/pen/qQqbOa/"> Countdown Timer</a> by Christoffer Artmann (<a href="https://codepen.io/Artmann">@Artmann</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-The simplest approach I can imagine is to save the time the user clicked the start button, then use `setInterval`  to continuously update the label.
+The simplest approach I can imagine is to save the time the user clicked the start button, then use `setInterval` to continuously update the label.
 
 ```js
 const duration = 10;
 let startTime;
 
-const label = document.querySelector('.time');
+const label = document.querySelector(".time");
 
-document.querySelector('button').addEventListener('click', () => {
-    startTime = Date.now();
+document.querySelector("button").addEventListener("click", () => {
+  startTime = Date.now();
 
-    setInterval(() => {
-      const t = Math.ceil(duration - (Date.now() - startTime) / 1000);
-      label.innerHTML = Math.max(0, t);
-    }, 200);
+  setInterval(() => {
+    const t = Math.ceil(duration - (Date.now() - startTime) / 1000);
+    label.innerHTML = Math.max(0, t);
+  }, 200);
 });
 ```
 
@@ -34,24 +34,24 @@ This solution works well but if we want to expand on our timer like adding the a
 
 The other thing that bugs me about this approach is the use of `setInterval`. I used an arbitrary interval of 200 milliseconds here, and this value will always we a compromise.
 
- To increase the accuracy of our timer, we want that value to be as low as possible, setting it to zero would be awesome as it would be executed on the next run of the event loop. But as we lower the value we also negatively impact the performance of our page.
+To increase the accuracy of our timer, we want that value to be as low as possible, setting it to zero would be awesome as it would be executed on the next run of the event loop. But as we lower the value we also negatively impact the performance of our page.
 
 Fortunately for us, there is another function we can use and it's. **window.requestAnimationFrame**. As the name implies it's primary use is to give you a callback that you can use for animations. After calling `requstAnimationFrame` with a callback, the next time the browser wants to do a repaint it will run your callback before it continues to the repaint. This is perfect when we want to do to animations that feels really smooth at a higher framerate. The added bonus is that calls to `requestAnimationFrame` are paused in most browsers when running in background tabs or hidden Iframes in order to improve performance and battery life.
 
-So now we have a better way to handle the timing, but we still need a more stable approach to keep track of the elapsed time. What we can do is that every time we run our function, we calculate the time since the last time we ran it. This is usually called the **Delta time**.  Then at every iteration, we aggregate the delta time with all the previous delta times.
+So now we have a better way to handle the timing, but we still need a more stable approach to keep track of the elapsed time. What we can do is that every time we run our function, we calculate the time since the last time we ran it. This is usually called the **Delta time**. Then at every iteration, we aggregate the delta time with all the previous delta times.
 
 ```js
 const elapsed = 0;
 const lastTimestamp = 0;
 
-const tick =  () => {
-	const timestamp = Date.now();
-	const deltaTime = timestamp - lastTimestamp;
-	lastTimestamp = timestamp;
+const tick = () => {
+  const timestamp = Date.now();
+  const deltaTime = timestamp - lastTimestamp;
+  lastTimestamp = timestamp;
 
-	elapsed += deltaTime / 1000;
+  elapsed += deltaTime / 1000;
 
-	window.requestAnimationFrame(tick);
+  window.requestAnimationFrame(tick);
 };
 
 tick();
@@ -61,7 +61,7 @@ Now it's super easy for us to control if the timer should run or not.
 
 ```js
 if (isActive) {
-	elapsed += deltaTime / 1000;
+  elapsed += deltaTime / 1000;
 }
 ```
 

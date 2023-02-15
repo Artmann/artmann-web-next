@@ -1,7 +1,7 @@
 ---
 title: Benchmarking Rails Server Software
 blurb: Diving in to some performance benchmarks between Apache + Passenger and Nginx + Puma.
-imageUrl: https://i.imgur.com/IMmUcTP.jpg
+imageUrl: /images/covers/benchmark.png
 publishedAt: 2015-03-27
 status: Published
 tags: Ruby on Rails

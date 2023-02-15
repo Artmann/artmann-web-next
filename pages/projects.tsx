@@ -2,13 +2,14 @@ import Head from 'next/head'
 import { ReactElement } from 'react';
 
 import Container from '../components/container';
+import Header from '../components/header';
 
 interface Library {
   description: string;
   github: string;
   icon: string;
   name: string;
-  
+
   homepage?: string;
 }
 
@@ -18,7 +19,7 @@ interface LibraryItemProps {
 
 function LibraryItem({ library }: LibraryItemProps): ReactElement {
   const gitHubUrl = `https://github.com/${ library.github }`;
-  
+
   const Homepage = (): ReactElement | null => library.homepage  ? (
       <p className="mb-4">
         <a href={ library.homepage } className="text-sm text-red-500 hover:text-red-700">
@@ -39,7 +40,7 @@ function LibraryItem({ library }: LibraryItemProps): ReactElement {
       </p>
 
       <Homepage />
-      
+
       <p className="mb-4">
         <a href={ gitHubUrl } className="text-sm text-red-500 hover:text-red-700">
           { gitHubUrl }
@@ -112,27 +113,28 @@ export default function Home(): ReactElement {
   ];
 
   return (
-    <Container>
-
+    <>
       <Head>
         <title>Projects - Christoffer Artmann</title>
       </Head>
 
-      <div className="border-b border-gray-300 pb-8 mb-8">
-        <h1 className="text-3xl mb-4">
-          Projects
-        </h1>
+      <Header />
 
-        <p>
-          I like to build stuff. 😊 So here's a list of things that I've helped build. 🚀
-        </p>
-      </div>
+      <Container>
+        <div className="border-b border-gray-300 pb-8 mb-8 pt-8">
+          <h1 className="text-3xl mb-4">
+            Projects
+          </h1>
 
-      <div className="pb-8 mb-8">
-        { libraries.map((library, index) => <LibraryItem library={ library } key={ index } /> )}
-      </div>
+          <p>
+            I like to build stuff. 😊 So here's a list of things that I've helped build. 🚀
+          </p>
+        </div>
 
-
-    </Container>
+        <div className="pb-8 mb-8">
+          { libraries.map((library, index) => <LibraryItem library={ library } key={ index } /> )}
+        </div>
+      </Container>
+    </>
   );
 }

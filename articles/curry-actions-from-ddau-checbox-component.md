@@ -1,7 +1,7 @@
 ---
 title: Curry actions from DDAU Checbox component
 blurb: Example of how to curry actions with a checkbox.
-imageUrl: https://i.imgur.com/Nu9Dodf.png
+imageUrl: /images/covers/ember.png
 publishedAt: 2016-11-03
 status: Published
 tags: Ember, Javascript
@@ -10,18 +10,22 @@ tags: Ember, Javascript
 ```js
 // trucks/controller.js
 
-import Ember from 'ember';
+import Ember from "ember";
 
 export default Ember.Controller.extend({
-  trucks: [{name: 'truck 1', inUse: false}, {name: 'truck 2', inUse: true}],
+  trucks: [
+    { name: "truck 1", inUse: false },
+    { name: "truck 2", inUse: true },
+  ],
 
   actions: {
     changeTruck(truck, inUse) {
-      Ember.set(truck, 'inUse', inUse);
-    }
-  }
+      Ember.set(truck, "inUse", inUse);
+    },
+  },
 });
 ```
+
 ```
 // ddau-checkbox/component.js
 
@@ -39,6 +43,7 @@ export default Ember.Component.extend({
    }
 });
 ```
+
 ```
 // trucks/template.hbs
 {{#each trucks as |truck|}}

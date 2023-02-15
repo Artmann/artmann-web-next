@@ -1,80 +1,126 @@
-import { GetStaticProps } from 'next';
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Link from 'next/link';
-import { ReactElement } from 'react';
+import Image from 'next/image'
+import Link from 'next/link'
+import { ReactElement } from 'react'
 
-import Container from '../components/container';
-import { Article, articleService } from '../lib/article-service';
-import { loadArticles } from '../lib/article-service/article-loader';
-import { parseDate } from '../lib/date';
+import Header from '../components/header'
+import { Article, articleService } from '../lib/article-service'
+import { loadArticles } from '../lib/article-service/article-loader'
 
 interface HomeProps {
-  articles: Article[];
+  articles: Article[]
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const articles = await loadArticles();
+  const articles = await loadArticles()
 
   return {
     props: {
       articles
     }
   }
-};
-
-function FeaturedArticle({ article } : { article: Article } ): ReactElement {
-  return (
-    <div className="md:mx-4 pb-8 flex flex-row items-start border-b-2 border-pink-500 mb-8 md:border-none md:flex-col md:items-center">
-      <div className="border-gray-300 shadow-lg w-48 h-32 flex-none bg-center bg-cover mr-4 md:w-84 md:h-64 md:mr-0 md:mb-8" style={{ backgroundImage: `url(${ article.imageUrl })` }}></div>
-
-      <div>
-        <Link href={ articleService.getPath(article) }>
-          <h2 className="cursor-pointer text-lg m-0">
-            { article.title }
-          </h2>
-        </Link>
-      </div>
-    </div>
-  );
-}
-
-function ArticleItem({ article } : { article: Article } ): ReactElement {
-  return (
-    <div className="py-8 flex flex-row items-start border-b border-gray-300">
-      <div className="border-gray-300 shadow-lg w-48 h-32 flex-none bg-center bg-cover mr-4" style={{ backgroundImage: `url(${ article.imageUrl })` }}></div>
-
-      <div>
-        <Link href={ articleService.getPath(article) }>
-          <h2 className="cursor-pointer text-lg m-0">
-            { article.title }
-          </h2>
-        </Link>
-        <p className="py-2 text-sm text-gray-600">
-          { parseDate(article.publishedAt).format('MMMM DD, YYYY') }
-        </p>
-      </div>
-    </div>
-  );
 }
 
 export default function Home({ articles }: HomeProps): ReactElement {
-  const [ firstArticle, secondArticle, ...restOfArticles ] = articles;
+  const [ firstArticle, ...restOfArticles ] = articles
 
   return (
-    <Container>
-
+    <>
       <Head>
         <title>Christoffer Artmann</title>
       </Head>
 
-      <div className="flex flex-col justify-center mb-8 md:border-b-2 md:border-pink-500 md:flex-row">
-        { [ firstArticle, secondArticle ].map(article => <FeaturedArticle article={ article } key={ article.title } />) }
-      </div>
+      <Header color={ false } />
 
-      <div>
-        { restOfArticles.map(article => <ArticleItem article={ article } key={ article.title } />) }
-      </div>
+      <div className='text-white' style={{ background: '#71222f' }}>
+        <section
+          className={`
+            w-full h-screen
+            bg-center bg-cover
+            shadow-md
+          `}
+          style={{ backgroundImage: `url(${firstArticle.imageUrl})` }}
+        >
+          <div
+            className='w-full h-full flex justify-center items-center p-8 border-box'
+            style={{
+              backgroundColor: 'rgba(148, 33, 66, 0.7)',
+              backdropFilter: 'blur(24px)'
+            }}
+          >
+            <div
+              className={`
+                flex flex-col gap-4 md:flex-row md:gap-12
+              `}
+              style={{
+                color: 'rgba(255, 255, 255, 0.88)'
+              }}
+            >
+              <img
+                alt={ firstArticle.title }
+                className='w-full aspect-[4/3] max-w-md shadow-md lg:max-w-lg'
+                src={ firstArticle.imageUrl }
+              />
+              <div className='flex flex-col gap-4 max-w-md'>
+                <h2
+                  className={`
+                    font-bold text-xl md:text-3xl
+                    hover:text-gray-200
+                  `}
+                >
+                  <Link href={ articleService.getPath(firstArticle) }>
+                    { firstArticle.title }
+                  </Link>
+                </h2>
+                <p className='text-sm md:text-lg'>
+                  { firstArticle.blurb }
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    </Container>
-  );
+        <section className='px-8 py-16 md:px-32'>
+          <div className='flex flex-col gap-16'>
+            {
+              restOfArticles.map(article => (
+                <div
+                  className={`
+                    flex flex-col md:flex-row
+                    items-center md:items-start
+                    gap-4 md:gap-12
+                  `}
+                  key={ article.title }
+                >
+                  <img
+                    alt={ article.title }
+                    className='w-full aspect-[4/3] max-w-md shadow-md'
+                    src={ article.imageUrl }
+                  />
+                  <div className='flex flex-col gap-4 max-w-md'>
+                    <h2
+                      className={`
+                        font-bold text-xl md:text-3xl
+                        hover:text-gray-200
+                        m-0 block
+                      `}
+                    >
+                      <Link href={ articleService.getPath(article) }>
+                        { article.title }
+                      </Link>
+                    </h2>
+                    <p className='text-sm md:text-lg'>
+                      { article.blurb }
+                    </p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+
+      </div>
+    </>
+  )
 }

@@ -1,14 +1,10 @@
 module.exports = {
-  purge: {
-    content: [
-      '**/*.html',
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.ts',
-      '**/*.tsx'
-    ],
-    enabled: process.env.NODE_ENV === 'production'
-  },
+  content: [
+    './components/**/*.{js,jsx,ts,tsx,vue}',
+    './pages/**/*.{js,jsx,ts,tsx,vue}',
+    './public/**/*.html'
+  ],
+  plugins: [],
   theme: {
     extend: {
       colors: {
@@ -24,5 +20,4 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
 }
