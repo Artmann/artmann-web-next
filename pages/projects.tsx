@@ -79,7 +79,7 @@ export default function Home(): ReactElement {
     {
       name: 'Resume Rocket',
       homepage: 'https://resumerocket.io/',
-      description: 'ResumeRocket.io is an innovative platform redefining the resume-building experience by leveraging AI technology to create personalized, impactful resumes. It aims to simplify the resume creation process, making it efficient and effective, with a mission to help users land their dream job. The platform offers AI-driven content and layout suggestions, ensuring resumes resonate with hiring managers and embody the professional journey of each user. Additionally, it provides ATS-compliant templates, combining aesthetics with functionality to enhance job seekers' chances in the competitive market.',
+      description: 'ResumeRocket.io is an innovative platform redefining the resume-building experience by leveraging AI technology to create personalized, impactful resumes. It aims to simplify the resume creation process, making it efficient and effective, with a mission to help users land their dream job. The platform offers AI-driven content and layout suggestions, ensuring resumes resonate with hiring managers and embody the professional journey of each user. Additionally, it provides ATS-compliant templates, combining aesthetics with functionality to enhance job seekers\' chances in the competitive market.',
       icon: 'https://resumerocket.io/images/resume-rocket-logo-small.webp'
     },
     {
