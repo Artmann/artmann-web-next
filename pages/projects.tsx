@@ -69,6 +69,30 @@ export default function Home(): ReactElement {
       homepage: 'https://esix.netlify.app/'
     },
     {
+      name: 'Steam Revenue Calculator',
+      github: 'Artmann/steam-revenue-calculator',
+      description: 'A revenue calculates for Steam games.',
+      icon: icons.react
+    },
+    {
+      name: 'Resume Rocket',
+      homepage: 'https://resumerocket.io/',
+      description: 'ResumeRocket.io is an innovative platform redefining the resume-building experience by leveraging AI technology to create personalized, impactful resumes. It aims to simplify the resume creation process, making it efficient and effective, with a mission to help users land their dream job. The platform offers AI-driven content and layout suggestions, ensuring resumes resonate with hiring managers and embody the professional journey of each user. Additionally, it provides ATS-compliant templates, combining aesthetics with functionality to enhance job seekers' chances in the competitive market.',
+      icon: 'https://resumerocket.io/images/resume-rocket-logo-small.webp'
+    },
+    {
+      name: 'Gustavs Kitchen',
+      homepage: 'https://www.gustavskitchen.se/',
+      description: 'Food blog full of amazing recipes.',
+      icon: icons.react
+    },
+    {
+      name: 'Building Things With Javascript',
+      homepage: 'https://buildingthingswithjavascript.com/',
+      description: 'Resources and tutorials for learning JavaScript, TypeScript and React.',
+      icon: icons.react
+    },
+    {
       name: 'React Shared Storage',
       github: 'Artmann/react-shared-storage',
       description: 'React Shared Storage is built to be a simple way for storing state in the browsers local storage. It will keep your state synced between different components and different windows and tabs.',
@@ -103,12 +127,6 @@ export default function Home(): ReactElement {
       github: 'Artmann/run-occasionally',
       description: 'Runs commands on a schedule.',
       icon: icons.go
-    },
-    {
-      name: 'Steam Revenue Calculator',
-      github: 'Artmann/steam-revenue-calculator',
-      description: 'A tool used to estimate sales for a game released on Steam.',
-      icon: icons.react
     }
   ];
 
