@@ -6,10 +6,10 @@ import Header from '../components/header';
 
 interface Library {
   description: string;
-  github: string;
   icon: string;
   name: string;
-
+  
+  github?: string;
   homepage?: string;
 }
 
@@ -41,11 +41,13 @@ function LibraryItem({ library }: LibraryItemProps): ReactElement {
 
       <Homepage />
 
-      <p className="mb-4">
-        <a href={ gitHubUrl } className="text-sm text-red-500 hover:text-red-700">
-          { gitHubUrl }
-        </a>
-      </p>
+      { library.github && (
+        <p className="mb-4">
+          <a href={ gitHubUrl } className="text-sm text-red-500 hover:text-red-700">
+            { gitHubUrl }
+          </a>
+        </p>
+      )}
     </div>
   );
 }
