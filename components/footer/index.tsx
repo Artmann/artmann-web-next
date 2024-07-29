@@ -27,11 +27,11 @@ export default function Footer(): ReactElement {
         </h3>
 
         <p className="mb-4 text-sm">
-          I'm a Developer and Product Manager living in sunny Barcelona.
+          I'm a Software Engineer and Product Manager living in sunny Barcelona.
         </p>
 
         <p className="mb-6 text-sm">
-          If you want to have a chat, you can find me on all the social platforms.
+          If you want to chat, you can find me on all the social platforms.
         </p>
 
         <div className="flex mb-4 text-2xl justify-center items-center">
