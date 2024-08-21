@@ -22,7 +22,7 @@ export default function Footer(): ReactElement {
         />
       </div>
       <div>
-        <h3 className="text-xl mt-0 mb-2">Hi, I'm Chris!</h3>
+        <h3 className="text-xl mt-0 mb-2 text-white">Hi, I'm Chris!</h3>
 
         <p className="mb-4 text-sm">
           I'm a Software Engineer and Product Manager living in sunny Barcelona.
