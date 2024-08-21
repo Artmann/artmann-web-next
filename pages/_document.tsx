@@ -1,4 +1,10 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext
+} from 'next/document'
 
 import { Fragment } from 'react'
 import { trackingId } from '../lib/google-analytics'
@@ -10,7 +16,7 @@ export default class CustomDocument extends Document {
 
     return {
       ...initialProps,
-      isProduction,
+      isProduction
     }
   }
 
@@ -20,14 +26,21 @@ export default class CustomDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel='preconnect' href='https://fonts.googleapis.com' />
-          <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='' />
+          <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+          />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin=""
+          />
 
           {isProduction && (
             <Fragment>
               <script
                 async
-                src={`https://www.googletagmanager.com/gtag/js?id=${ trackingId }`}
+                src={`https://www.googletagmanager.com/gtag/js?id=${trackingId}`}
               />
               <script
                 dangerouslySetInnerHTML={{
@@ -36,18 +49,21 @@ export default class CustomDocument extends Document {
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
 
-                    gtag('config', '${ trackingId }', {
+                    gtag('config', '${trackingId}', {
                       page_path: window.location.pathname,
                     });
-                  `,
+                  `
                 }}
               />
             </Fragment>
           )}
 
-          <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Special+Elite&display=swap' rel='stylesheet' />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Special+Elite&display=swap"
+            rel="stylesheet"
+          />
         </Head>
-        <body>
+        <body className="text-gray-700 antialiased">
           <Main />
           <NextScript />
         </body>

@@ -16,7 +16,7 @@ interface ArticlePageProps {
   articles: Article[]
 }
 
-export const getStaticProps: GetStaticProps = async(context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const articles = await loadArticles()
 
   return {
@@ -26,11 +26,11 @@ export const getStaticProps: GetStaticProps = async(context) => {
   }
 }
 
-export const getStaticPaths: GetStaticPaths = async() => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const articles = await loadArticles()
   const paths = articles
-    .map(article => articleService.getSlug(article))
-    .map(slug => ({
+    .map((article) => articleService.getSlug(article))
+    .map((slug) => ({
       params: {
         slug
       }
@@ -54,10 +54,12 @@ function renderMarkdown(markdown: string): string {
   })
 }
 
-export default function ArticlePage({ articles }: ArticlePageProps): ReactElement {
+export default function ArticlePage({
+  articles
+}: ArticlePageProps): ReactElement {
   const router = useRouter()
   const { slug } = router.query
-  const article = articles.find(a => articleService.getSlug(a) === slug)
+  const article = articles.find((a) => articleService.getSlug(a) === slug)
 
   const disqusConfig = {
     identifier: articleService.getSlug(article),
@@ -68,57 +70,80 @@ export default function ArticlePage({ articles }: ArticlePageProps): ReactElemen
   return (
     <>
       <Head>
-        <title>{ article.title }</title>
-        <meta name="description" content={ article.blurb } />
+        <title>{article.title}</title>
+        <meta
+          name="description"
+          content={article.blurb}
+        />
 
-        <meta property="og:title" content={ article.title } />
-        <meta property="og:type" content="website" />
-        <meta property="og:description" content={ article.blurb } />
-        <meta property="og:image" content={ article.imageUrl } />
+        <meta
+          property="og:title"
+          content={article.title}
+        />
+        <meta
+          property="og:type"
+          content="website"
+        />
+        <meta
+          property="og:description"
+          content={article.blurb}
+        />
+        <meta
+          property="og:image"
+          content={article.imageUrl}
+        />
 
-
-        <meta property="twitter:title" content={ article.title } />
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:description" content={ article.blurb } />
-        <meta property="twitter:image" content={ article.imageUrl } />
+        <meta
+          property="twitter:title"
+          content={article.title}
+        />
+        <meta
+          property="twitter:card"
+          content="summary"
+        />
+        <meta
+          property="twitter:description"
+          content={article.blurb}
+        />
+        <meta
+          property="twitter:image"
+          content={article.imageUrl}
+        />
       </Head>
 
       <Header />
 
       <Container>
-        <article className="w-full text-gray-700 leading-loose pt-8">
-          <header>
-            <h1 className="text-3xl mb-4">
-              { article.title }
+        <article className="w-full text-gray-700 leading-loose pt-8 space-y-8">
+          <header className="space-y-3">
+            <h1 className="text-2xl md:text-3xl font-semibold">
+              {article.title}
             </h1>
 
-            <p className="text-xl text-gray-700 mb-4">
-              { article.blurb }
-            </p>
+            <p className="text-lg md:text-xl">{article.blurb}</p>
 
             <p className="mb-8 text-sm text-gray-600">
-              { parseDate(article.publishedAt).format('MMMM DD, YYYY') }
+              {parseDate(article.publishedAt).format('MMMM DD, YYYY')}
             </p>
           </header>
 
           <img
-            alt={ article.title }
-            className="w-full h-auto border-gray-300 shadow-lg mb-16 overflow-x-hidden break-words"
-            src={ article.imageUrl }
-            />
+            alt={article.title}
+            className="w-full h-auto border-gray-300 shadow-lg overflow-x-hidden break-words"
+            src={article.imageUrl}
+          />
 
           <div
-            className="article-content text-xl leading-relaxed pb-16"
-            dangerouslySetInnerHTML={{ __html: renderMarkdown(article.text) }
-            }></div>
-
+            className="article-content text-lg leading-relaxed text-gray-800 pb-16 md:pb-32"
+            dangerouslySetInnerHTML={{ __html: renderMarkdown(article.text) }}
+          ></div>
         </article>
 
         <div>
-        <DiscussionEmbed
-          shortname='artmann'
-          config={ disqusConfig }
-        />
+          <DiscussionEmbed
+            shortname="artmann"
+            config={disqusConfig}
+          />
         </div>
       </Container>
     </>

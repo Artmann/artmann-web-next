@@ -19,15 +19,15 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  @apply text-3xl;
+  @apply text-3xl text-black;
 }
 
 h2 {
-  @apply text-2xl;
+  @apply text-2xl text-black;
 }
 
 h3 {
-  @apply text-xl;
+  @apply text-xl text-black;
 }
 
 a {
@@ -52,10 +52,35 @@ a {
   @apply block mx-auto;
 }
 
-.article-content pre {
-  color: #dcd6b0;
+.article-content a {
+  color: #1d4ed8;
+}
 
-  @apply bg-gray-900 shadow-lg px-4 py-6 text-sm overflow-x-auto break-all;
+.article-content a:hover {
+  text-decoration: underline;
+}
+
+.article-content a:visited {
+  color: #1e3a8a;
+}
+
+.article-content pre {
+  background-color: #22272E;;
+  color: #ACB7C3;
+
+  @apply font-mono shadow-lg p-3 text-sm overflow-x-auto break-all;
+}
+
+/* Inline code */
+.article-content p > code {
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 6px;
+  font-size: 14px;
+  padding: .2em .4em;
+  margin: 0;
+  white-space: break-spaces;
+
+  @apply font-mono;
 }
 
 .article-content ul {

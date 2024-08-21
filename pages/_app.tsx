@@ -3,7 +3,8 @@ import { ReactElement } from 'react'
 
 import { pageView } from '../lib/google-analytics'
 
-import 'highlight.js/styles/gruvbox-dark.css'
+import 'highlight.js/styles/github-dark-dimmed.min.css'
+
 import '../styles/globals.css'
 
 Router.events.on('routeChangeComplete', (url: string) => {
@@ -11,7 +12,5 @@ Router.events.on('routeChangeComplete', (url: string) => {
 })
 
 export default function MyApp({ Component, pageProps }): ReactElement {
-  return (
-      <Component {...pageProps} />
-  )
+  return <Component {...pageProps} />
 }

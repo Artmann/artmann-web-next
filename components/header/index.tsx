@@ -18,7 +18,7 @@ export default function Header({ color = true }: HeaderProps): ReactElement {
       `}
       style={{
         backdropFilter: 'blur(24px)',
-        backgroundColor: color ? 'rgba(113, 34,47, 0.95)' : 'transparent',
+        backgroundColor: color ? 'rgba(113, 34,47, 0.95)' : 'transparent'
       }}
     >
       <div
@@ -29,10 +29,10 @@ export default function Header({ color = true }: HeaderProps): ReactElement {
           mx-auto
         `}
       >
-        <div className='flex-1'>
+        <div className="flex-1">
           <Link
-            className='text-sm font-bold'
-            href='/'
+            className="text-sm font-semibold"
+            href="/"
             style={{ fontFamily: 'Poppins' }}
           >
             Christoffer Artmann
@@ -41,21 +41,25 @@ export default function Header({ color = true }: HeaderProps): ReactElement {
         <nav
           className={`
             flex gap-4
-            font-semibold
+            font-medium
             text-xs
           `}
         >
           <div>
             <Link
-              className='hover:underline'
-              href='/'
-            >Posts</Link>
+              className="hover:underline"
+              href="/"
+            >
+              Posts
+            </Link>
           </div>
           <div>
             <Link
-              className='hover:underline'
-              href='/projects'
-            >Projects</Link>
+              className="hover:underline"
+              href="/projects"
+            >
+              Projects
+            </Link>
           </div>
         </nav>
       </div>
