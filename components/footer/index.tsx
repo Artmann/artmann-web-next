@@ -1,12 +1,19 @@
 import React, { ReactElement } from 'react'
-import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi'
+import {
+  FiGithub,
+  FiInstagram,
+  FiLink,
+  FiLinkedin,
+  FiTwitter
+} from 'react-icons/fi'
 
 export default function Footer(): ReactElement {
   const socials = [
     { icon: FiGithub, url: 'https://github.com/artmann/' },
     { icon: FiInstagram, url: 'https://www.instagram.com/christofferartmann/' },
     { icon: FiLinkedin, url: 'https://www.linkedin.com/in/chistoffer-artmann' },
-    { icon: FiTwitter, url: 'https://twitter.com/chrisartmann' }
+    { icon: FiTwitter, url: 'https://twitter.com/chrisartmann' },
+    { icon: FiLink, url: 'https://linktr.ee/chrisartmann' }
   ]
 
   return (
