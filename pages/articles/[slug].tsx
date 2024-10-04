@@ -114,7 +114,7 @@ export default function ArticlePage({
       <Header />
 
       <Container>
-        <article className="w-full text-gray-700 leading-loose pt-8 space-y-8">
+        <article className="w-full text-gray-800 leading-loose pt-8 space-y-8">
           <header className="space-y-3">
             <h1 className="text-2xl md:text-3xl font-semibold">
               {article.title}
