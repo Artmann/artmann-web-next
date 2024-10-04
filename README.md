@@ -1,4 +1,4 @@
-This is the code for my personal website (https://www.artmann.co/>), where I
+This is the code for my personal website (https://www.artmann.co), where I
 occasionally write about software development and building things on the
 Internet.
 
