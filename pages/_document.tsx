@@ -85,7 +85,7 @@ export default class CustomDocument extends Document {
           />
           <meta
             name="og:image"
-            content="/images/artmann-og-image.png"
+            content="https://www.artmann.co/images/artmann-og-image.png"
           />
         </Head>
         <body className="text-gray-700 antialiased">

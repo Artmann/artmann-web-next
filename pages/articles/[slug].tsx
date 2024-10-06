@@ -90,7 +90,7 @@ export default function ArticlePage({
         />
         <meta
           property="og:image"
-          content={article.imageUrl}
+          content={`https://www.artmann.co${article.imageUrl}`}
         />
 
         <meta
@@ -107,7 +107,7 @@ export default function ArticlePage({
         />
         <meta
           property="twitter:image"
-          content={article.imageUrl}
+          content={`https://www.artmann.co${article.imageUrl}`}
         />
       </Head>
 
