@@ -97,7 +97,7 @@ function ArticleCard({ article }: { article: Article }): ReactElement {
     <div className="flex flex-col md:flex-row gap-2 md:gap-8 lg:gap-12 items-start">
       <img
         alt={article.title}
-        className="w-full max-w-[18rem] aspect-[4/3] shadow-lg"
+        className="w-full max-w-[18rem] md:max-w-[24rem] aspect-[4/3] shadow-lg"
         loading="lazy"
         src={article.imageUrl}
       />
