@@ -1,21 +1,25 @@
 ---
 title: String Concatenation Cheat Sheet
 blurb: Your one resource for String Concatenation in different languages.
-imageUrl: /images/covers/cheat-sheet.png
+imageUrl: /images/covers/cheat-sheet.webp
 publishedAt: 2017-02-10
 status: Published
 tags: Strings
 ---
 
-When switching between languages I often find my self Googling on how to do string concatenation and especially interpolation which no two languages seems to agree on.
+When switching between languages I often find my self Googling on how to do
+string concatenation and especially interpolation which no two languages seems
+to agree on.
 
 For future reference, Here's how you do it.
 
 ## C
 
-In C, strings are really just plain `char` arrays. Therefore, you can't directly concatenate them with other strings.
+In C, strings are really just plain `char` arrays. Therefore, you can't directly
+concatenate them with other strings.
 
-You can use the `strcat` function, which appends the string pointed to by `src` to the end of the string pointed to by `dest`:
+You can use the `strcat` function, which appends the string pointed to by `src`
+to the end of the string pointed to by `dest`:
 
 ```c
 char *strcat(char *dest, const char *src);
@@ -53,7 +57,6 @@ Console.WriteLine($"Hello {firstName} {lastName}");
 
 You can use the `+` operator to concatenate strings in Go.
 
-
 ```go
 firtName := "James"
 lastName := "Pierce"
@@ -70,7 +73,8 @@ lastName := "Richards"
 fullName = fmt.Sprintf("%s %s", firstName, lastName)
 ```
 
-Strings are read-only in Go so a new object is generated every time you concatenate two strings. If this becomes a problem you can use `bytes.buffer`.
+Strings are read-only in Go so a new object is generated every time you
+concatenate two strings. If this becomes a problem you can use `bytes.buffer`.
 
 ```go
 var buffer bytes.Buffer
@@ -97,19 +101,19 @@ System.out.println("Hello " + name);
 Javascript uses the `+` operator to concatenate strings.
 
 ```js
-let firstName = 'Isabela';
-let lastName = 'Wang';
+let firstName = 'Isabela'
+let lastName = 'Wang'
 
-console.log(firstName + ' ' + lastName);
+console.log(firstName + ' ' + lastName)
 ```
 
 You can also interpolate strings with backticks.
 
 ```js
-let firstName = 'Megan';
-let lastName = 'Fox';
+let firstName = 'Megan'
+let lastName = 'Fox'
 
-console.log(`Hello ${firstName} ${lastName}`);
+console.log(`Hello ${firstName} ${lastName}`)
 ```
 
 ## PHP
