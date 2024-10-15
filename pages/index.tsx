@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { ReactElement } from 'react'
+import { ReactElement, useCallback, useEffect, useState } from 'react'
 
 import Header from '../components/header'
 import { Article, articleService } from '../lib/article-service'
@@ -24,6 +24,20 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export default function Home({ articles }: HomeProps): ReactElement {
   const [firstArticle, ...restOfArticles] = articles
 
+  const [backgroundPositionX, setBackgroundPositionX] = useState(0)
+
+  const handleScroll = useCallback(() => {
+    const scrollSpeed = 0.25
+
+    setBackgroundPositionX(-window.scrollY * scrollSpeed)
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [handleScroll])
+
   return (
     <>
       <Head>
@@ -32,90 +46,75 @@ export default function Home({ articles }: HomeProps): ReactElement {
 
       <Header color={false} />
 
-      <div
-        className="text-white"
-        style={{ background: '#71222f' }}
-      >
-        <section
+      <div className="relative">
+        <div
           className={`
-            w-full h-screen
-            bg-center bg-cover
-            shadow-md
+            fixed inset-0
+            bg-[url('/images/parallax-forest-tiled.png')]
+            bg-fixed bg-cover
           `}
-          style={{ backgroundImage: `url(${firstArticle.imageUrl})` }}
+          style={{
+            backgroundPositionX
+          }}
         >
           <div
-            className="w-full h-full flex justify-center items-center p-8 border-box"
+            className="w-full h-full"
             style={{
-              backgroundColor: 'rgba(148, 33, 66, 0.7)',
-              backdropFilter: 'blur(24px)'
+              backgroundColor: 'rgba(148, 33, 66, 0.5)',
+              backdropFilter: 'blur(20px)'
             }}
+          />
+        </div>
+        <div className="relative z-10 min-h-screen text-white">
+          <section
+            className={`
+              w-full h-screen
+              flex justify-center items-center
+              p-6
+            `}
           >
-            <div
-              className={`
-                flex flex-col gap-4 md:flex-row md:gap-12
-              `}
-              style={{
-                color: 'rgba(255, 255, 255, 0.88)'
-              }}
-            >
-              <img
-                alt={firstArticle.title}
-                className="w-full aspect-[4/3] max-w-md shadow-md lg:max-w-lg"
-                src={firstArticle.imageUrl}
-              />
-              <div className="flex flex-col gap-4 max-w-md">
-                <h2
-                  className={`
-                    font-bold text-xl md:text-3xl text-white
-                    hover:text-gray-200
-                  `}
-                >
-                  <Link href={articleService.getPath(firstArticle)}>
-                    {firstArticle.title}
-                  </Link>
-                </h2>
-                <p className="text-sm md:text-lg">{firstArticle.blurb}</p>
-              </div>
-            </div>
-          </div>
-        </section>
+            <ArticleCard article={firstArticle} />
+          </section>
 
-        <section className="px-8 py-16 md:px-32">
-          <div className="flex flex-col gap-16">
+          <section className="w-full box-border p-6 pb-32 space-y-16 md:space-y-24">
             {restOfArticles.map((article) => (
               <div
-                className={`
-                    flex flex-col md:flex-row
-                    items-center md:items-start
-                    gap-4 md:gap-12
-                  `}
                 key={article.title}
+                className="w-full max-w-4xl mx-auto"
               >
-                <img
-                  alt={article.title}
-                  className="w-full aspect-[4/3] max-w-md shadow-md"
-                  src={article.imageUrl}
-                />
-                <div className="flex flex-col gap-4 max-w-md">
-                  <h2
-                    className={`
-                        font-bold text-xl md:text-3xl text-white
-                        hover:text-gray-200
-                        m-0 block
-                      `}
-                  >
-                    <Link href={articleService.getPath(article)}>
-                      {article.title}
-                    </Link>
-                  </h2>
-                  <p className="text-sm md:text-lg">{article.blurb}</p>
-                </div>
+                <ArticleCard article={article} />
               </div>
             ))}
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </>
+  )
+}
+
+function ArticleCard({ article }: { article: Article }): ReactElement {
+  return (
+    <div className="flex flex-col md:flex-row gap-2 md:gap-8 lg:gap-12 items-start">
+      <img
+        alt={article.title}
+        className="w-full max-w-[20rem] aspect-[4/3] shadow-lg"
+        loading="lazy"
+        src={article.imageUrl}
+      />
+
+      <div className="flex flex-col gap-2 max-w-md">
+        <h2
+          className={`
+            font-bold text-xl md:text-3xl text-white
+            hover:text-gray-200
+            m-0
+          `}
+        >
+          <Link href={articleService.getPath(article)}>{article.title}</Link>
+        </h2>
+
+        <p className="md:text-lg">{article.blurb}</p>
+      </div>
+    </div>
   )
 }

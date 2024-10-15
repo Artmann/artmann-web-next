@@ -13,7 +13,7 @@ export default function Header({ color = true }: HeaderProps): ReactElement {
         box-border
         px-8 py-2 md:py-3
         fixed top-0
-        z-10
+        z-20
         text-white
       `}
       style={{
