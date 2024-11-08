@@ -70,6 +70,12 @@ export default function Home(): ReactElement {
       icon: icons.typescript,
       homepage: 'https://esix.netlify.app/'
     },
+      {
+      name: 'PMKIN',
+      description: 'PMKIN makes content creation effortless with an intuitive editor that lets your team focus on writing. Centralize all your content, seamlessly integrate with Next.js, and publish updates faster—without bottlenecks or code.',
+      homepage: 'https://pmkin.io/',
+      icon: icons.react
+    },
     {
       name: 'Steam Revenue Calculator',
       github: 'Artmann/steam-revenue-calculator',
@@ -85,7 +91,7 @@ export default function Home(): ReactElement {
     {
       name: 'Gustavs Kitchen',
       homepage: 'https://www.gustavskitchen.se/',
-      description: 'Food blog full of amazing recipes.',
+      description: 'Learn how to cook tasty food.',
       icon: icons.react
     },
     {
