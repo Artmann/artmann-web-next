@@ -95,6 +95,12 @@ export default function Home(): ReactElement {
       icon: icons.react
     },
     {
+      name: 'Tiny TypeScript Logger',
+      github: 'Artmann/tiny-typescript-logger',
+      description: 'Get wonderful colorized log messages straight into your terminal.',
+      icon: icons.typescript
+    },
+    {
       name: 'React Shared Storage',
       github: 'Artmann/react-shared-storage',
       description: 'React Shared Storage is built to be a simple way for storing state in the browsers local storage. It will keep your state synced between different components and different windows and tabs.',
