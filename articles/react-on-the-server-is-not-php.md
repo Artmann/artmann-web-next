@@ -13,15 +13,15 @@ tags: TypeScript, React, JavaScript, SSR, PHP
 
 Today, I wanted to talk about a topic that's been buzzing around Twitter and dev
 circles lately. You've probably heard people say, **"Now that we're server-side
-rendering JavaScript, it's just PHP all over again!"** 🤔 Well, buckle up,
-because I'm about to explain why that's not quite the case – and why it's
-actually, it's pretty darn exciting!
+rendering JavaScript, it's just PHP all over again!"** 🤔 Well, I want to
+explain why I don't think that's quite the case – and why it's actually, it's
+pretty darn exciting!
 
 Remember when Internet Explorer was still a thing? (I know, I'm aging myself
 here). We were all writing PHP to our heart's content, and life seemed simpler.
-But here's the twist: we weren't building the complex, ambitious apps we are
-today. We were solving smaller problems, and that's what people often miss when
-they get nostalgic.
+But things were different: we weren't building the complex, ambitious apps we
+are today. We were solving smaller problems, and that's what people often miss
+when they get nostalgic.
 
 Back then, we'd use server-side languages like PHP, Java, or – if you were
 really living on the edge – Perl. We'd follow the
@@ -45,28 +45,28 @@ Before ES6, it was pretty terrible to work with. Raise your hand if you remember
 We tried our best to write as little JavaScript as possible, using it in places
 where it was absolutely necessary.
 
-But here's the thing. We wanted to build more stuff. More impressive apps.
-We need better functions for our users, and as our apps got more and more ambitious, we
-couldn't escape JavaScript. It's the language of the web, after all! As we built
-larger and more complex applications in the browser, we started running into
-some serious headaches.
+But here's the thing. We wanted to build more stuff. More impressive apps. We
+need better functions for our users, and as our apps got more and more
+ambitious, we couldn't escape JavaScript. It's the language of the web, after
+all! As we built larger and more complex applications in the browser, we started
+running into some serious headaches.
 
 For starters, creating your UI on the server and then editing it at runtime with
-JavaScript was like trying to pat your head and rub your belly simultaneously
-– possible, but not exactly graceful. 😅 Imagine having a blog post like this
-one with a commenting system. You would loop over all the comments in your
-template and create the HTML structure on the server. But what happens when the
-user posts a new comment, and you need to create a DOM element in the browser?
-You'd either have to recreate the comment structure with the same tags and
-classes in JavaScript (hello, maintenance nightmare!), or you would create a
-hidden template element, clone that element, and then populate the right divs
-with the correct data and hopefully, no one had changed the class names in the
-template. It was... not ideal, to say the least.
+JavaScript was like trying to pat your head and rub your belly simultaneously –
+possible, but not exactly graceful. 😅 Imagine having a blog post like this one
+with a commenting system. You would loop over all the comments in your template
+and create the HTML structure on the server. But what happens when the user
+posts a new comment, and you need to create a DOM element in the browser? You'd
+either have to recreate the comment structure with the same tags and classes in
+JavaScript (hello, maintenance nightmare!), or you would create a hidden
+template element, clone that element, and then populate the right divs with the
+correct data and hopefully, no one had changed the class names in the template.
+It was... not ideal, to say the least.
 
 We also realized that using imperative code for building UIs was as fun as
 trying to herd cats. We wanted our UIs to be declarative and based on state, and
-we wanted reusable components. That way, we could always render the UI
-correctly without worrying about things getting out of sync.
+we wanted reusable components. That way, we could always render the UI correctly
+without worrying about things getting out of sync.
 
 So, we moved everything to the client. Single-page applications became all the
 rage, and we had rich interactivity at our fingertips. It was amazing... until
@@ -82,9 +82,10 @@ but with great power comes great responsibility. I've lost count of how many
 Now, we are loading our data from our API so we can show and modify data with
 ease, but we have to figure out how to deal with loading states and waterfalls.
 
-Then came the performance. When your entire app lives on the client, it's now up to
-your device to create the whole UI. It's not exactly speedy, and having the server
-render an empty div and a script tag for each page is not exactly great for SEO.
+Then came the performance. When your entire app lives on the client, it's now up
+to your device to create the whole UI. It's not exactly speedy, and having the
+server render an empty div and a script tag for each page is not exactly great
+for SEO.
 
 However, perhaps the biggest drawback was how it solidified the divide between
 front-end and back-end developers. Back in the day, we were all just "web
@@ -118,21 +119,20 @@ can now build really ambitious applications and frameworks like Next.js and
 Remix allows us to utilize the server for more than just serializing JSON.
 
 But here's where it gets really exciting: these full-stack JavaScript frameworks
-are helping us close the gap between frontend and backend developers.
-🌉 Remember that artificial divide we created? Well, it's starting to crumble,
-and that's a good thing! With a unified language and toolset, it's becoming
-easier for a single developer to build an end-to-end feature. No more awkward
-handoffs between teams or lost-in-translation moments. You can now handle
-everything from database queries to UI interactions in one seamless flow. It's
-like being a web development superhero with powers on both sides of the stack!
-I don't think it will make development more efficient but also lead to
-more cohesive products. After all, when you understand both the server and
-client side, you can make smarter decisions about where to put logic and how to
-optimize performance. It's bringing us back to the "full-stack developer" ideal
-but with way cooler tools and without the spaghetti code nightmares of the past.
-So, if you've been feeling pigeonholed as a "frontend" or "backend" dev,
-now's your chance to break free and embrace the full spectrum of web
-development!
+are helping us close the gap between frontend and backend developers. 🌉
+Remember that artificial divide we created? Well, it's starting to crumble, and
+that's a good thing! With a unified language and toolset, it's becoming easier
+for a single developer to build an end-to-end feature. No more awkward handoffs
+between teams or lost-in-translation moments. You can now handle everything from
+database queries to UI interactions in one seamless flow. It's like being a web
+development superhero with powers on both sides of the stack! I don't think it
+will make development more efficient but also lead to more cohesive products.
+After all, when you understand both the server and client side, you can make
+smarter decisions about where to put logic and how to optimize performance. It's
+bringing us back to the "full-stack developer" ideal but with way cooler tools
+and without the spaghetti code nightmares of the past. So, if you've been
+feeling pigeonholed as a "frontend" or "backend" dev, now's your chance to break
+free and embrace the full spectrum of web development!
 
 It's a fantastic time to be in our field! If you haven't dived into modern
 JavaScript frameworks yet, what are you waiting for? Today's the day! 🚀 We've
@@ -141,5 +141,5 @@ surface, we're building on years of UI development principles and best
 practices.
 
 I'd love to hear your thoughts on this! Have you made the switch to full-stack
-JavaScript? Are you still holding onto PHP for dear life? Please drop a comment below
-and let's chat!
+JavaScript? Are you still holding onto PHP for dear life? Please drop a comment
+below and let's chat!
