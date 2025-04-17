@@ -16,16 +16,16 @@ are a cool way of automating things you do in the browser. Recently, Chrome
 changed its guidelines and broke a bunch of extensions, so I had to recreate
 some of the ones I use often. I haven't created Chrome extensions since 2020, so
 it's been a while, and some of our preferred tools have changed. Now we have
-Vite, and life is great!
+awesome tools like Vite and shadcn/ui, and we can use them to supercharge our development.
 
-I wanted to use my normal stack of React, Tailwind, and shadcn/ui. Even if you
+I wanted to use my usual stack of React, Tailwind, and shadcn/ui. Even if you
 don't need most of it for all extensions, it's better to have it and not need it
 than to need it and not have it. Here are the steps you need to create a Chrome
 extension using React, Tailwind, and Vite.
 
-Nowadays, I usually use Bun to run my Typescript code. If you want to use Node
+Nowadays, I usually use Bun to run my TypeScript code. If you want to use Node
 with yarn or npm, using Node 23 will make your life a lot easier as it comes
-with built-in typescript support, and you don't need to deal with as many ESM
+with built-in TypeScript support, and you don't need to deal with as many ESM
 issues.
 
 > 💡 **Vibe Coding Tip:** If you're looking to speed up your Chrome extension
@@ -67,9 +67,9 @@ the following content:
 }
 ```
 
-This is a super minimal manifest that just creates a popup extension. The
+This is a super minimal manifest that creates a pop-up extension. The
 `action` field tells Chrome to load our popup from the `dist/index.html` file
-that Vite will generate when we build. You can add more stuff later like
+that Vite will generate when we build. You can add more stuff later, like
 permissions and background scripts, but this is all we need to get started.
 
 ## Step 3: Configure Vite for Extension Development
