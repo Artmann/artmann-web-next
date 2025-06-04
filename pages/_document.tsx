@@ -3,7 +3,8 @@ import Document, {
   Head,
   Main,
   NextScript,
-  DocumentContext
+  DocumentContext,
+  Script
 } from 'next/document'
 
 import { Fragment } from 'react'
@@ -91,6 +92,14 @@ export default class CustomDocument extends Document {
         <body className="text-gray-700 antialiased">
           <Main />
           <NextScript />
+
+          <Script
+            id="analytics"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `!(function(t,e){var o,n,p,r;e.__SV||(window.analytics=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)));}};((p=t.createElement("script")).type="text/javascript",p.async=!0,p.src="https://nick-barth.github.io/browser/browser.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="analytics",u.toString=function(t){var e="analytics";return"analytics"!==a&&(e+="."+a),t||(e+=" (stub)"),e},o="init track pageview".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a]);},e.__SV=1);})(document,window.analytics||[]);window.analytics.init('eyJhbGciOiJIUzI1NiJ9.eyJwcm9qZWN0SWQiOiIwM2NlZmNlYS0zNDEwLTQ2YjAtYTMyOS0yNmUzYTg2ZmIyNGEiLCJpYXQiOjE3NDkwNzA0MTksImV4cCI6MTc4MDYyODAxOX0.1B9wjQ9acIb2hCyemRvh0Wu1zAfutJVnbeap7OrZeZA');`,
+            }}
+          />
         </body>
       </Html>
     )
