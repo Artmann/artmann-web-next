@@ -3,9 +3,10 @@ import Document, {
   Head,
   Main,
   NextScript,
-  DocumentContext,
-  Script
+  DocumentContext
 } from 'next/document'
+import Script from 'next/script'
+
 
 import { Fragment } from 'react'
 import { trackingId } from '../lib/google-analytics'
