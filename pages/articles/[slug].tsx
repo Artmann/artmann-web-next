@@ -4,7 +4,7 @@ import marked from 'marked'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { ReactElement } from 'react'
+import { ReactElement, useEffect } from 'react'
 
 import Container from '../../components/container'
 import Header from '../../components/header'
@@ -60,6 +60,12 @@ export default function ArticlePage({
   const router = useRouter()
   const { slug } = router.query
   const article = articles.find((a) => articleService.getSlug(a) === slug)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.analytics && article) {
+      window.analytics.funnel('activation')
+    }
+  }, [article])
 
   const disqusConfig = {
     identifier: articleService.getSlug(article),
