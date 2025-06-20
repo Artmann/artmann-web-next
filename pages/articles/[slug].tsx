@@ -5,6 +5,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ReactElement, useEffect } from 'react'
+import { analytics } from 'tinyplg-browser'
 
 import Container from '../../components/container'
 import Header from '../../components/header'
@@ -62,10 +63,8 @@ export default function ArticlePage({
   const article = articles.find((a) => articleService.getSlug(a) === slug)
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.analytics && article) {
-      window.analytics.funnel('activation')
-    }
-  }, [article])
+    analytics.funnel('activation')
+  }, [])
 
   const disqusConfig = {
     identifier: articleService.getSlug(article),
