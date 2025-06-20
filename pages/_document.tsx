@@ -94,13 +94,6 @@ export default class CustomDocument extends Document {
           <Main />
           <NextScript />
 
-          <Script
-            id="analytics"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `!(function(t,e){var o,n,p,r;e.__SV||(window.analytics=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)));}};((p=t.createElement("script")).type="text/javascript",p.async=!0,p.src="https://nick-barth.github.io/browser/browser.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="analytics",u.toString=function(t){var e="analytics";return"analytics"!==a&&(e+="."+a),t||(e+=" (stub)"),e},o="init track pageview".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a]);},e.__SV=1);})(document,window.analytics||[]);window.analytics.init('eyJhbGciOiJIUzI1NiJ9.eyJwcm9qZWN0SWQiOiJmOWM1YTE5Yy0wYTg0LTQ0YTQtYmJjZS0yZmI3NjZiMmUxYWEiLCJpYXQiOjE3NTA0MTEzNTEsImV4cCI6MTc4MVk2ODk1MX0.Yvv2hjoIAQ51pKCUlkFFUE0jTomG8yJbuyU93BlrdDE');`,
-            }}
-          />
         </body>
       </Html>
     )
