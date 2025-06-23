@@ -68,7 +68,7 @@ years.
 <img alt="Cleaning up your project" loading="lazy" src="/images/cleaning-up.webp" />
 
 I wouldn't expect AI tools to make your engineers much faster individually, but
-we can use the introduction of these tools as a cataclyst of change for how we
+We can use the introduction of these tools as a catalyst for change in how we
 work, invest in our processes and our tooling to build better software and ship
 it more often. The real speed improvements come from removing the organizational
 cruft that's been slowing us down all along.
