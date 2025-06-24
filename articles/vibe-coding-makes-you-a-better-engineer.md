@@ -2,7 +2,7 @@
 title: Vibe Coding Makes You a Better Engineer
 blurb:
   I'm an AI-first developer now, with most of my code coming from coding agents.
-  But here's the twist. I don't think AI makes me faster. Instead, it's made me
+  I don't think AI makes me faster. Instead, it's making me
   a better engineer by forcing me to level up the skills that actually matter.
 imageUrl: /images/covers/vibe-coding-makes-you-a-better-engineer.webp
 publishedAt: 2025-06-24
