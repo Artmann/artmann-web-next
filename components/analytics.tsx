@@ -1,12 +1,14 @@
-"use client";
+'use client'
 
-import { useEffect } from "react";
-import { analytics } from "tinyplg-browser";
+import { useEffect } from 'react'
+import { analytics } from 'roaarrr-browser'
 
 export function Analytics() {
   useEffect(() => {
-    analytics.init("eyJhbGciOiJIUzI1NiJ9.eyJwcm9qZWN0SWQiOiI3OWUzZTQ4OC1kZWQyLTRiYzAtOGQ3MS04ODlhOTE2MWYyNGYiLCJpYXQiOjE3NTA0MjY0NjUsImV4cCI6MTc4MTk4NDA2NX0.FtFbJA-ISNmDMhAeBjnOxDYWu0qeOwnsM0tpB3LBqug");
-  }, []);
+    analytics.init(
+      'eyJhbGciOiJIUzI1NiJ9.eyJwcm9qZWN0SWQiOiIzNDI1NDEwYi1iMGQ5LTRhNDMtYmUwZC0wNzU1NjA3MDEwNzYiLCJpYXQiOjE3NTUwMTgwNzEsImV4cCI6MTc4NjU3NTY3MX0.JVRvT7U7GjClV0eUpl35SqiX4GH5WjQPAxbjKDsxJdo'
+    )
+  }, [])
 
-  return null;
+  return null
 }

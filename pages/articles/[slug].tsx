@@ -5,7 +5,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ReactElement, useEffect } from 'react'
-import { analytics } from 'tinyplg-browser'
+import { analytics } from 'roaarrr-browser'
 
 import Container from '../../components/container'
 import Header from '../../components/header'

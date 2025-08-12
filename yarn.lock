@@ -2212,6 +2212,11 @@ reusify@^1.0.4:
   resolved "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
+roaarrr-browser@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/roaarrr-browser/-/roaarrr-browser-1.0.2.tgz#c2a28f49a56a454ca7aec869ee142ae0d634c188"
+  integrity sha512-o3Y++aGXUxrWWG2gZUWL0U/Qz8CI4JP09R75yF0htcx9ztYw9si7KeuTGyoecPpKYgTLbEW/VUOrrxAbzy/cCA==
+
 run-parallel@^1.1.9:
   version "1.2.0"
   resolved "https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz"
@@ -2438,11 +2443,6 @@ tiny-glob@^0.2.9:
   dependencies:
     globalyzer "0.1.0"
     globrex "^0.1.2"
-
-tinyplg-browser@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/tinyplg-browser/-/tinyplg-browser-1.0.1.tgz"
-  integrity sha512-xlGmg3uNTYztE6eA6PWWeJJUPgEo92C+RDkpV1UBcQo0chnvB0/hUPamW3rQyQnGYeedmLjz1Hxq9pDsHOHS2A==
 
 to-regex-range@^5.0.1:
   version "5.0.1"
