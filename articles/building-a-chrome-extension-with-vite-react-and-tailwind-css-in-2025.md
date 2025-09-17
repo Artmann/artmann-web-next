@@ -1,10 +1,6 @@
 ---
 title: Building a Chrome Extension with Vite, React, and Tailwind CSS in 2025
-blurb:
-  Chrome extensions are one of the most powerful ways to customize your browser
-  experience, but getting started with modern development tools can be tricky.
-  In this guide, I'll walk you through creating a Chrome extension using Vite,
-  React, and Tailwind CSS – my go-to stack for web development.
+blurb: A step-by-step guide to building your first Chrome extension
 imageUrl: /images/covers/building-a-chrome-extension-with-vite-react-and-tailwind-css-in-2025.webp
 publishedAt: 2025-04-16
 status: Published
