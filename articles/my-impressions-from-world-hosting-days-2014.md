@@ -7,7 +7,7 @@ blurb:
 imageUrl: /images/covers/conference.webp
 publishedAt: 2014-04-03
 status: Published
-tags: Hosting, Conference
+tags: Hosting, Conference, Retrospective
 ---
 
 ## Open source is great
