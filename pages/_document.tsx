@@ -26,7 +26,7 @@ export default class CustomDocument extends Document {
     const { isProduction } = this.props as any
 
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <link
             rel="preconnect"
@@ -65,30 +65,6 @@ export default class CustomDocument extends Document {
             rel="stylesheet"
           />
 
-          <meta
-            name="og:title"
-            content="Christoffer Artmann"
-          />
-          <meta
-            name="description"
-            content="I'm a software engineer and product builder. I write about software development, product management, and personal growth."
-          />
-          <meta
-            name="og:description"
-            content="I'm a software engineer and product builder. I write about software development, product management, and personal growth."
-          />
-          <meta
-            name="og:type"
-            content="website"
-          />
-          <meta
-            name="og:url"
-            content="https://artmann.co"
-          />
-          <meta
-            name="og:image"
-            content="https://www.artmann.co/images/artmann-og-image.png"
-          />
         </Head>
         <body className="text-gray-700 antialiased">
           <Main />

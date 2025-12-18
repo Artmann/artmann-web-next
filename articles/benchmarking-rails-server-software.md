@@ -30,11 +30,11 @@ request per seconds it could handle and the mean response time.
 
 ## Requests per second
 
-![request per secod](http://i.imgur.com/Z6V8S1O.jpg)
+![request per secod](https://i.imgur.com/Z6V8S1O.jpg)
 
 ## Mean response time
 
-![Mean response time](http://i.imgur.com/Z6V8S1O.jpg)
+![Mean response time](https://i.imgur.com/Z6V8S1O.jpg)
 
 So it seems when it comes to Passenger vs Puma it seems like Puma is the way to
 go.
