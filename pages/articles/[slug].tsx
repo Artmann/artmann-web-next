@@ -97,6 +97,10 @@ export default function ArticlePage({
           property="og:image"
           content={`https://www.artmann.co${article.imageUrl}`}
         />
+        <meta
+          property="og:url"
+          content={`https://www.artmann.co/articles/${slug}`}
+        />
 
         <meta
           property="twitter:title"
