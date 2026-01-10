@@ -70,11 +70,13 @@ export default function Home(): ReactElement {
       icon: icons.typescript,
       homepage: 'https://esix.netlify.app/'
     },
-      {
-      name: 'PMKIN',
-      description: 'PMKIN makes content creation effortless with an intuitive editor that lets your team focus on writing. Centralize all your content, seamlessly integrate with Next.js, and publish updates faster—without bottlenecks or code.',
-      homepage: 'https://pmkin.io/',
-      icon: icons.react
+    {
+      name: 'Pull Panda',
+      github: 'Artmann/pull-panda-desktop',
+      description: 'Delightful code reviews.',
+      homepage: 'https://pullpanda.io/',
+      icon: 'https://pullpanda.io/logo-transparent.png'
+      
     },
     {
       name: 'Steam Revenue Calculator',
@@ -92,6 +94,12 @@ export default function Home(): ReactElement {
       name: 'Bitesized',
       homepage: 'https://www.bitesized.app/',
       description: 'Digital menu platform that lets restaurants create beautiful, mobile-friendly QR code menus they can update instantly from their phone.',
+      icon: icons.react
+    },
+    {
+      name: 'PMKIN',
+      description: 'PMKIN makes content creation effortless with an intuitive editor that lets your team focus on writing. Centralize all your content, seamlessly integrate with Next.js, and publish updates faster—without bottlenecks or code.',
+      homepage: 'https://pmkin.io/',
       icon: icons.react
     },
     {
