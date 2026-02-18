@@ -143,7 +143,7 @@ export default function ArticlePage({
           />
 
           <div
-            className="article-content text-lg leading-relaxed text-gray-800 pb-16 md:pb-32"
+            className="article-content text-base leading-relaxed text-gray-900 pb-16 md:pb-32"
             dangerouslySetInnerHTML={{ __html: renderMarkdown(article.text) }}
           ></div>
         </article>

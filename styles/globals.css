@@ -32,7 +32,7 @@ h2,
 h3,
 h4 {
 	font-family: "Poppins", sans-serif;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 h1 {
@@ -64,11 +64,24 @@ a {
 .article-content p,
 .article-content img,
 .article-content iframe,
+.article-content ul,
+.article-content ol,
 h1,
 h2,
 h3,
 h4 {
-	@apply max-w-full mt-8;
+	@apply max-w-full mt-6;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+	margin-bottom: 0;
+}
+
+.article-content li {
+	margin-bottom: 0.25rem;
 }
 
 /* The first paragraph after a heading */
@@ -96,10 +109,119 @@ h4 {
 }
 
 .article-content pre {
-	background-color: #22272e;
-	color: #acb7c3;
+	background-color: #292c3c;
+	color: #c6d0f5;
+	border-radius: 0.75rem;
 
-	@apply font-mono shadow-lg p-3 text-sm overflow-x-auto break-all mt-2;
+	font-size: 13px;
+	@apply font-mono p-5 overflow-x-auto break-all mt-2;
+}
+
+/* Catppuccin Frappe syntax highlighting */
+.article-content pre .hljs-keyword,
+.article-content pre .hljs-variable,
+.article-content pre .hljs-variable.language_,
+.article-content pre .hljs-name,
+.article-content pre .hljs-selector-attr {
+	color: #ca9ee6;
+}
+
+.article-content pre .hljs-built_in,
+.article-content pre .hljs-doctag {
+	color: #e78284;
+}
+
+.article-content pre .hljs-type,
+.article-content pre .hljs-title.class_,
+.article-content pre .hljs-selector-tag {
+	color: #e5c890;
+}
+
+.article-content pre .hljs-literal,
+.article-content pre .hljs-number,
+.article-content pre .hljs-variable.constant_,
+.article-content pre .hljs-meta {
+	color: #ef9f76;
+}
+
+.article-content pre .hljs-string,
+.article-content pre .hljs-char.escape_,
+.article-content pre .hljs-attribute,
+.article-content pre .hljs-code,
+.article-content pre .hljs-quote {
+	color: #a6d189;
+}
+
+.article-content pre .hljs-title,
+.article-content pre .hljs-title.function_,
+.article-content pre .hljs-section,
+.article-content pre .hljs-attr,
+.article-content pre .hljs-selector-id {
+	color: #8caaee;
+}
+
+.article-content pre .hljs-property,
+.article-content pre .hljs-tag,
+.article-content pre .hljs-bullet,
+.article-content pre .hljs-formula,
+.article-content pre .hljs-selector-class,
+.article-content pre .hljs-selector-pseudo {
+	color: #81c8be;
+}
+
+.article-content pre .hljs-operator {
+	color: #99d1db;
+}
+
+.article-content pre .hljs-punctuation {
+	color: #b5bfe2;
+}
+
+.article-content pre .hljs-comment {
+	color: #949cbb;
+}
+
+.article-content pre .hljs-subst {
+	color: #a5adce;
+}
+
+.article-content pre .hljs-regexp {
+	color: #f4b8e4;
+}
+
+.article-content pre .hljs-symbol,
+.article-content pre .hljs-template-tag,
+.article-content pre .hljs-template-variable {
+	color: #eebebe;
+}
+
+.article-content pre .hljs-link {
+	color: #85c1dc;
+	font-style: italic;
+}
+
+.article-content pre .hljs-emphasis {
+	color: #e78284;
+	font-style: italic;
+}
+
+.article-content pre .hljs-strong {
+	color: #e78284;
+	font-weight: bold;
+}
+
+.article-content pre .hljs-addition {
+	color: #a6d189;
+	background: rgba(166, 209, 137, 0.15);
+}
+
+.article-content pre .hljs-deletion {
+	color: #e78284;
+	background: rgba(231, 130, 132, 0.15);
+}
+
+.article-content pre .hljs-params {
+	color: #c6d0f5;
 }
 
 /* Inline code */
