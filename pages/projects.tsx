@@ -59,7 +59,7 @@ export default function Home(): ReactElement {
     python: 'https://i.imgur.com/jhHz8Py.png',
     react: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
     ruby: 'https://avatars0.githubusercontent.com/u/19463480?s=512&v=4',
-    typescript: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png'
+    typescript: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1280px-Typescript_logo_2020.svg.png'
   };
 
   const libraries: Library[] = [
@@ -68,7 +68,7 @@ export default function Home(): ReactElement {
       github: 'Artmann/esix',
       description: 'A really slick ORM for MongoDB.',
       icon: icons.typescript,
-      homepage: 'https://esix.netlify.app/'
+      homepage: 'https://www.esixorm.com/introduction'
     },
     {
       name: 'Pull Panda',
