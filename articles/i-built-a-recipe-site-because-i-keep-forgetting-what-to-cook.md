@@ -6,7 +6,7 @@ blurb:
   boring stuff, and used a Claude Code skill to write all the content.
 imageUrl: /images/covers/i-built-a-recipe-site-because-i-keep-forgetting-what-to-cook.webp
 publishedAt: 2026-04-13
-status: Draft
+status: Published
 tags: Next.js, AI, Claude Code, Vercel, Side Projects
 ---
 
