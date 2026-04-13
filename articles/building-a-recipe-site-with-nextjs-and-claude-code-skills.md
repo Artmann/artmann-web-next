@@ -24,6 +24,8 @@ collect these restaurant-style recipes, fill in the gaps, and make them approach
 cooks. Not dumbed down, but translated. The goal isn't to simplify the food — it's to give
 you enough context and technique to actually pull it off in a home kitchen.
 
+<img alt="A recipe on Full Send Kitchen" loading="lazy" src="/images/blog/full-send-kitchen-recipe.webp" />
+
 I've actually built a recipe site before. [Gustavs Kitchen](https://gustavskitchen.se/) is
 focused on everyday Swedish cooking — the kind of food you make on a Tuesday when you just
 need to get dinner on the table. Full Send Kitchen is the opposite end of the spectrum. This
@@ -74,6 +76,8 @@ like: educational but inspirational, ambitious but grounded in the reality that 
 for home cooks, not restaurant kitchens. It's all about adding guard rails and narrowing the
 scope of the agent so it does the one thing well.
 
+<img alt="The add-recipe skill" loading="lazy" src="/images/blog/full-send-kitchen-skill.webp" />
+
 I didn't go to culinary school, but Claude probably knows most cooking techniques, especially
 all the French ones I struggle to pronounce. Since the whole point of this project is to
 become a better cook and learn these skills, I had Claude create a set of reference files
@@ -82,11 +86,13 @@ they are and when to use them. The skill references these files, which means eve
 that mentions "mount with butter" explains it consistently, and I get to learn the concept
 properly. It's basically a style guide, but for cooking knowledge instead of prose.
 
+<img alt="Cooking technique reference files in the skill" loading="lazy" src="/images/blog/full-send-kitchen-techniques.webp" />
+
 So does it work? I made a
 [Coconut Bread Pudding with Pineapple Cream](https://fullsendkitchen.com/recipes/coconut-bread-pudding-pineapple-cream)
 from Top Chef, and it was delicious.
 
-<img alt="Coconut Bread Pudding with Pineapple Cream" loading="lazy" src="/images/coconut-bread-pudding.webp" />
+<img alt="Coconut Bread Pudding with Pineapple Cream" loading="lazy" src="/images/blog/full-send-kitchen-bread-pudding.webp" />
 
 Building things for yourself is still one of the best reasons to write code. Not everything
 needs to be a startup or have a growth strategy. Sometimes you just want to cook a great meal
