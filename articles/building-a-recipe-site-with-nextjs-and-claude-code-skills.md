@@ -1,5 +1,5 @@
 ---
-title: Building a Recipe Site with Next.js and Claude Code Skills
+title: I Built a Recipe Site Because I Keep Forgetting What to Cook
 blurb:
   I built fullsendkitchen.com to collect restaurant-style recipes from TV cooking
   shows. Here's why I kept the data model dead simple, chose Vercel for the
