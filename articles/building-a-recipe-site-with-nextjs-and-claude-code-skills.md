@@ -52,7 +52,7 @@ the free-text content — the story, the technique explanations, the context —
 for the structured data like ingredients, steps, categories, and tags. The JSON gets used for
 building the category and tag pages and for displaying the recipe steps and ingredient lists.
 
-Here's where it gets opinionated. The urge as an engineer is to build a proper data model for
+The urge as an engineer is to build a proper data model for
 ingredients. Normalized names, amounts, and units. Separate fields for quantity, measurement,
 and item so you can scale recipes, convert between metric and imperial, and compare
 ingredients across dishes. I know because I've done it before, and it was a constant source
@@ -60,8 +60,7 @@ of bugs. Bad pluralization ("1 tomatoes"), weird edge cases ("a pinch of salt" �
 "pinch"?), and degraded experiences for no real benefit. I never ended up using any of the
 fancy features it was supposed to enable. So this time, ingredients and steps are just string
 arrays. `"2 cups heavy cream"` is a string. `"1 vanilla bean, split and scraped"` is a
-string. They exist to be displayed, not computed over. Do you really need a normalized
-ingredient model if you're never going to calculate with it?
+string. They exist to be displayed, not computed over.
 
 For the content itself, I've kept it just as simple. I've previously written a few different
 CLIs and agent loops for generating content, but I'm more and more bearish on writing your
@@ -98,5 +97,3 @@ from Top Chef, and it was delicious.
 Building things for yourself is still one of the best reasons to write code. Not everything
 needs to be a startup or have a growth strategy. Sometimes you just want to cook a great meal
 for your friends, and you need a good recipe to get there.
-
-~ Good vibes
