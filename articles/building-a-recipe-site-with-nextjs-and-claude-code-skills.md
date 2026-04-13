@@ -16,8 +16,9 @@ where chefs make these incredible, ambitious dishes under pressure. Restaurant-s
 Fine dining plating. Techniques I've never heard of. And every time I see a dish I want to
 make, I run into the same problem: the show gives you maybe 30 seconds of screen time for
 something that took the chef four hours. You see the finished plate, you hear a few
-ingredients mentioned, and that's it. If you actually want to cook the dish, you're on your
-own, piecing it together from food blogs, YouTube videos, and guesswork.
+ingredients mentioned, and that's it. You think "I should make that" and then a week later
+you've completely forgotten about it. And even if you do remember, actually cooking the dish
+means you're on your own, piecing it together from food blogs, YouTube videos, and guesswork.
 
 So I built [Full Send Kitchen](https://fullsendkitchen.com/) to fix that. The idea is simple:
 collect these restaurant-style recipes, fill in the gaps, and make them approachable for home
