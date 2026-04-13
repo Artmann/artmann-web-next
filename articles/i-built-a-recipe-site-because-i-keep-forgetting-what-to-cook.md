@@ -4,7 +4,7 @@ blurb:
   I built fullsendkitchen.com to collect restaurant-style recipes from TV cooking
   shows. Here's why I kept the data model dead simple, chose Vercel for the
   boring stuff, and used a Claude Code skill to write all the content.
-imageUrl: /images/covers/building-a-recipe-site-with-nextjs-and-claude-code-skills.webp
+imageUrl: /images/covers/i-built-a-recipe-site-because-i-keep-forgetting-what-to-cook.webp
 publishedAt: 2026-04-13
 status: Draft
 tags: Next.js, AI, Claude Code, Vercel, Side Projects
