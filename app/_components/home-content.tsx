@@ -1,27 +1,16 @@
-import { GetStaticProps } from 'next'
-import Head from 'next/head'
+'use client'
+
 import Link from 'next/link'
-import { ReactElement, useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState, type ReactElement } from 'react'
 
-import Header from '../components/header'
-import { Article, articleService } from '../lib/article-service'
-import { loadArticles } from '../lib/article-service/article-loader'
+import Header from '../../components/header'
+import { articleService, type Article } from '../../lib/article-service'
 
-interface HomeProps {
+interface HomeContentProps {
   articles: Article[]
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const articles = await loadArticles()
-
-  return {
-    props: {
-      articles
-    }
-  }
-}
-
-export default function Home({ articles }: HomeProps): ReactElement {
+export function HomeContent({ articles }: HomeContentProps): ReactElement {
   const [firstArticle, ...restOfArticles] = articles
 
   const [backgroundPositionX, setBackgroundPositionX] = useState(0)
@@ -40,10 +29,6 @@ export default function Home({ articles }: HomeProps): ReactElement {
 
   return (
     <>
-      <Head>
-        <title>Christoffer Artmann</title>
-      </Head>
-
       <Header color={false} />
 
       <div className="relative">
