@@ -10,7 +10,15 @@ module.exports = {
       colors: {
         'navy-400': '#1F253C',
         'navy-700': '#0C192F',
-        'navy-900': '#060d19'
+        'navy-900': '#060d19',
+        paper: '#F4EFE6',
+        ink: '#111111',
+        'accent-red': '#E63946',
+        'accent-yellow': '#F4C430',
+        'accent-blue': '#1D4ED8'
+      },
+      fontFamily: {
+        display: ['"Archivo Black"', 'Impact', 'sans-serif']
       },
       spacing: {
         84: '21rem',
