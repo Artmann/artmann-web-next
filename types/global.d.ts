@@ -5,4 +5,5 @@ interface Window {
     pageview: (properties?: any) => void
     init: (key: string) => void
   }
+  gtag?: (...args: any[]) => void
 }
