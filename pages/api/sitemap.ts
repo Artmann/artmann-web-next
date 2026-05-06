@@ -1,39 +1,42 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { SitemapStream, streamToPromise } from 'sitemap';
+import { NextApiRequest, NextApiResponse } from 'next'
+import { SitemapStream, streamToPromise } from 'sitemap'
 
-import { loadArticles } from '../../lib/article-service/article-loader';
-import { articleService } from '../../lib/article-service';
-import { parseDate } from '../../lib/date';
+import { loadArticles } from '../../lib/article-service/article-loader'
+import { articleService } from '../../lib/article-service'
+import { parseDate } from '../../lib/date'
 
-export default async(request: NextApiRequest, response: NextApiResponse): Promise<void> => {
-  const articles = await loadArticles();
+export default async (
+  request: NextApiRequest,
+  response: NextApiResponse
+): Promise<void> => {
+  const articles = await loadArticles()
 
   const stream = new SitemapStream({
-    hostname: 'https://www.artmann.co',
-  });
+    hostname: 'https://www.artmann.co'
+  })
 
   stream.write({
-    url: '/',
-  });
+    url: '/'
+  })
 
   stream.write({
-    url: '/projects',
-  });
+    url: '/projects'
+  })
 
-  articles.forEach(article => {
+  articles.forEach((article) => {
     stream.write({
       url: articleService.getPath(article),
       lastmod: parseDate(article.publishedAt).toISOString()
-    });
-  });
+    })
+  })
 
-  stream.end();
+  stream.end()
 
-  const sitemap = await streamToPromise(stream);
+  const sitemap = await streamToPromise(stream)
 
-  response.setHeader('Content-Type', 'text/xml');
+  response.setHeader('Content-Type', 'text/xml')
 
-  response.write(sitemap.toString());
+  response.write(sitemap.toString())
 
-  response.end();
+  response.end()
 }

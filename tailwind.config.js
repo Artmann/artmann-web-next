@@ -13,11 +13,11 @@ module.exports = {
         'navy-900': '#060d19'
       },
       spacing: {
-        '84': '21rem',
-        '96': '24rem',
-        '256': '42rem'
+        84: '21rem',
+        96: '24rem',
+        256: '42rem'
       }
-    },
+    }
   },
-  variants: {},
+  variants: {}
 }

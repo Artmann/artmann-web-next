@@ -53,14 +53,11 @@ order value for customers on the Pro plan who logged in last month?"
 A data warehouse solves this by pulling everything into one place. The modern
 data stack typically looks something like this:
 
-**Extract** — Pull data out of your source systems (databases, APIs, SaaS
-tools).
-
-**Transform** — Clean, normalize, and join the data into useful shapes.
-
-**Load** — Write it into a storage format optimized for analytical queries.
-
-**Query** — Run SQL against the combined dataset.
+- **Extract** — Pull data out of your source systems (databases, APIs, SaaS
+  tools).
+- **Transform** — Clean, normalize, and join the data into useful shapes.
+- **Load** — Write it into a storage format optimized for analytical queries.
+- **Query** — Run SQL against the combined dataset.
 
 At the enterprise level, you'd use tools like Fivetran or Airbyte for
 extraction, dbt for transformation, and Snowflake or BigQuery as the query
@@ -132,8 +129,8 @@ ORDER BY total_revenue DESC;
 DuckDB parallelizes reads across multiple CPU cores automatically and uses two
 optimizations to avoid reading data it doesn't need: **projection pushdown**,
 where it only reads the columns your query actually references, and **partition
-pruning**, where it skips entire files based on the directory structure. Together,
-your queries often read a small fraction of the total data stored.
+pruning**, where it skips entire files based on the directory structure.
+Together, your queries often read a small fraction of the total data stored.
 
 One practical concern with Parquet files is schema changes. If you add a column
 to your source database (say, `phone_number` on the customers table), the new
@@ -306,8 +303,6 @@ into Parquet files, upload them to S3, and query the results with DuckDB.
 
 The complete code is on GitHub at
 [artmann/simple-data-warehouse](https://github.com/artmann/simple-data-warehouse).
-
-### The source database
 
 We start with a Docker Compose setup that runs Postgres and seeds it with
 example data. This simulates a typical SaaS application database with three

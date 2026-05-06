@@ -4,61 +4,61 @@
 
 html,
 body {
-	font-size: 16px;
-	padding: 0;
-	margin: 0;
-	font-family:
-		"Inter",
-		-apple-system,
-		BlinkMacSystemFont,
-		Segoe UI,
-		Roboto,
-		Oxygen,
-		Ubuntu,
-		Cantarell,
-		Fira Sans,
-		Droid Sans,
-		Helvetica Neue,
-		sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
 
-	@apply leading-relaxed text-gray-700;
+  @apply leading-relaxed text-gray-700;
 
-	--webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  --webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
 h2,
 h3,
 h4 {
-	font-family: "Poppins", sans-serif;
-	font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 h1 {
-	@apply text-3xl text-black;
+  @apply text-3xl text-black;
 }
 
 h2 {
-	@apply text-2xl text-black;
+  @apply text-2xl text-black;
 }
 
 h3 {
-	@apply text-xl text-black;
+  @apply text-xl text-black;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .brand {
-	font-family: "Poppins", sans-serif;
-	font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 .article-content p,
@@ -70,51 +70,51 @@ h1,
 h2,
 h3,
 h4 {
-	@apply max-w-full mt-6;
+  @apply max-w-full mt-6;
 }
 
 .article-content h1,
 .article-content h2,
 .article-content h3,
 .article-content h4 {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .article-content li {
-	margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 /* The first paragraph after a heading */
 .article-content h1 + p,
 .article-content h2 + p,
 .article-content h3 + p {
-	margin-top: 0.75rem;
+  margin-top: 0.75rem;
 }
 
 .article-content img,
 .article-content iframe {
-	@apply block mx-auto;
+  @apply block mx-auto;
 }
 
 .article-content a {
-	color: #1d4ed8;
+  color: #1d4ed8;
 }
 
 .article-content a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .article-content a:visited {
-	color: #1e3a8a;
+  color: #1e3a8a;
 }
 
 .article-content pre {
-	background-color: #292c3c;
-	color: #c6d0f5;
-	border-radius: 0.75rem;
+  background-color: #292c3c;
+  color: #c6d0f5;
+  border-radius: 0.75rem;
 
-	font-size: 13px;
-	@apply font-mono p-5 overflow-x-auto break-all mt-2;
+  font-size: 13px;
+  @apply font-mono p-5 overflow-x-auto break-all mt-2;
 }
 
 /* Catppuccin Frappe syntax highlighting */
@@ -123,25 +123,25 @@ h4 {
 .article-content pre .hljs-variable.language_,
 .article-content pre .hljs-name,
 .article-content pre .hljs-selector-attr {
-	color: #ca9ee6;
+  color: #ca9ee6;
 }
 
 .article-content pre .hljs-built_in,
 .article-content pre .hljs-doctag {
-	color: #e78284;
+  color: #e78284;
 }
 
 .article-content pre .hljs-type,
 .article-content pre .hljs-title.class_,
 .article-content pre .hljs-selector-tag {
-	color: #e5c890;
+  color: #e5c890;
 }
 
 .article-content pre .hljs-literal,
 .article-content pre .hljs-number,
 .article-content pre .hljs-variable.constant_,
 .article-content pre .hljs-meta {
-	color: #ef9f76;
+  color: #ef9f76;
 }
 
 .article-content pre .hljs-string,
@@ -149,7 +149,7 @@ h4 {
 .article-content pre .hljs-attribute,
 .article-content pre .hljs-code,
 .article-content pre .hljs-quote {
-	color: #a6d189;
+  color: #a6d189;
 }
 
 .article-content pre .hljs-title,
@@ -157,7 +157,7 @@ h4 {
 .article-content pre .hljs-section,
 .article-content pre .hljs-attr,
 .article-content pre .hljs-selector-id {
-	color: #8caaee;
+  color: #8caaee;
 }
 
 .article-content pre .hljs-property,
@@ -166,101 +166,101 @@ h4 {
 .article-content pre .hljs-formula,
 .article-content pre .hljs-selector-class,
 .article-content pre .hljs-selector-pseudo {
-	color: #81c8be;
+  color: #81c8be;
 }
 
 .article-content pre .hljs-operator {
-	color: #99d1db;
+  color: #99d1db;
 }
 
 .article-content pre .hljs-punctuation {
-	color: #b5bfe2;
+  color: #b5bfe2;
 }
 
 .article-content pre .hljs-comment {
-	color: #949cbb;
+  color: #949cbb;
 }
 
 .article-content pre .hljs-subst {
-	color: #a5adce;
+  color: #a5adce;
 }
 
 .article-content pre .hljs-regexp {
-	color: #f4b8e4;
+  color: #f4b8e4;
 }
 
 .article-content pre .hljs-symbol,
 .article-content pre .hljs-template-tag,
 .article-content pre .hljs-template-variable {
-	color: #eebebe;
+  color: #eebebe;
 }
 
 .article-content pre .hljs-link {
-	color: #85c1dc;
-	font-style: italic;
+  color: #85c1dc;
+  font-style: italic;
 }
 
 .article-content pre .hljs-emphasis {
-	color: #e78284;
-	font-style: italic;
+  color: #e78284;
+  font-style: italic;
 }
 
 .article-content pre .hljs-strong {
-	color: #e78284;
-	font-weight: bold;
+  color: #e78284;
+  font-weight: bold;
 }
 
 .article-content pre .hljs-addition {
-	color: #a6d189;
-	background: rgba(166, 209, 137, 0.15);
+  color: #a6d189;
+  background: rgba(166, 209, 137, 0.15);
 }
 
 .article-content pre .hljs-deletion {
-	color: #e78284;
-	background: rgba(231, 130, 132, 0.15);
+  color: #e78284;
+  background: rgba(231, 130, 132, 0.15);
 }
 
 .article-content pre .hljs-params {
-	color: #c6d0f5;
+  color: #c6d0f5;
 }
 
 /* Inline code */
 .article-content p > code,
 .article-content li > code {
-	background-color: rgba(175, 184, 193, 0.2);
-	border-radius: 6px;
-	font-size: 14px;
-	padding: 0.2em 0.4em;
-	margin: 0;
-	white-space: break-spaces;
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  white-space: break-spaces;
 
-	@apply font-mono;
+  @apply font-mono;
 }
 
 .article-content ul,
 .article-content ol {
-	color: rgba(22, 22, 22);
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.75rem;
-	list-style: disc;
-	list-style-position: inside;
-	margin-bottom: 1.5rem;
+  color: rgba(22, 22, 22);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  list-style: disc;
+  list-style-position: inside;
+  margin-bottom: 1.5rem;
 }
 
 .article-content ol p {
-	display: inline;
-	margin: 0;
+  display: inline;
+  margin: 0;
 }
 
 .article-content blockquote {
-	@apply bg-slate-100 text-sm p-4 my-4 rounded-lg leading-relaxed;
+  @apply bg-slate-100 text-sm p-4 my-4 rounded-lg leading-relaxed;
 }
 
 .article-content blockquote p:first-of-type {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 .article-content hr {
-	margin-top: 2rem;
+  margin-top: 2rem;
 }

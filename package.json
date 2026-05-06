@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
+    "format": "prettier --write .",
     "start": "next start"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
     "@types/youtube": "^0.0.39",
     "cross-env": "^7.0.3",
     "postcss-preset-env": "^8.0.1",
+    "prettier": "^3.8.3",
     "tailwindcss": "^3.2.6",
     "typescript": "5.8.3"
   },
