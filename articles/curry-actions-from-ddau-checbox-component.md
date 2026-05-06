@@ -10,20 +10,20 @@ tags: Ember, Javascript
 ```js
 // trucks/controller.js
 
-import Ember from "ember";
+import Ember from 'ember'
 
 export default Ember.Controller.extend({
   trucks: [
-    { name: "truck 1", inUse: false },
-    { name: "truck 2", inUse: true },
+    { name: 'truck 1', inUse: false },
+    { name: 'truck 2', inUse: true }
   ],
 
   actions: {
     changeTruck(truck, inUse) {
-      Ember.set(truck, "inUse", inUse);
-    },
-  },
-});
+      Ember.set(truck, 'inUse', inUse)
+    }
+  }
+})
 ```
 
 ```

@@ -12,7 +12,8 @@ are a cool way of automating things you do in the browser. Recently, Chrome
 changed its guidelines and broke a bunch of extensions, so I had to recreate
 some of the ones I use often. I haven't created Chrome extensions since 2020, so
 it's been a while, and some of our preferred tools have changed. Now we have
-awesome tools like Vite and shadcn/ui, and we can use them to supercharge our development.
+awesome tools like Vite and shadcn/ui, and we can use them to supercharge our
+development.
 
 I wanted to use my usual stack of React, Tailwind, and shadcn/ui. Even if you
 don't need most of it for all extensions, it's better to have it and not need it
@@ -63,10 +64,10 @@ the following content:
 }
 ```
 
-This is a super minimal manifest that creates a pop-up extension. The
-`action` field tells Chrome to load our popup from the `dist/index.html` file
-that Vite will generate when we build. You can add more stuff later, like
-permissions and background scripts, but this is all we need to get started.
+This is a super minimal manifest that creates a pop-up extension. The `action`
+field tells Chrome to load our popup from the `dist/index.html` file that Vite
+will generate when we build. You can add more stuff later, like permissions and
+background scripts, but this is all we need to get started.
 
 ## Step 3: Configure Vite for Extension Development
 
