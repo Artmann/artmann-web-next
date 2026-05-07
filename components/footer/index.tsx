@@ -28,26 +28,26 @@ export default function Footer(): ReactElement {
           src="/images/christoffer-artmann.jpg"
         />
       </div>
-      <div>
-        <h3 className="text-xl mt-0 mb-2 text-white">Hi, I&apos;m Chris!</h3>
+      <div className="flex flex-col items-center gap-2">
+        <h3 className="text-xl m-0 text-white">Hi, I&apos;m Chris!</h3>
 
-        <p className="mb-4 text-sm">
+        <p className="text-sm m-0">
           I&apos;m a Software Engineer and Product Manager living in sunny
           Barcelona.
         </p>
 
-        <p className="mb-6 text-sm">
+        <p className="text-sm m-0">
           If you want to chat, you can find me on all the social platforms.
         </p>
 
-        <div className="flex mb-4 text-2xl justify-center items-center">
+        <div className="flex gap-4 mt-4 text-2xl justify-center items-center">
           {socials.map((social, index) => {
             return (
               <a
                 href={social.url}
                 key={index}
               >
-                <social.icon className="mr-2" />
+                <social.icon />
               </a>
             )
           })}
