@@ -27,7 +27,7 @@ export function ArticleClientEffects({
   }
 
   return (
-    <div>
+    <div style={{ color: 'rgb(55, 65, 81)', backgroundColor: 'rgb(255, 255, 255)' }}>
       <DiscussionEmbed
         shortname="artmann"
         config={disqusConfig}
