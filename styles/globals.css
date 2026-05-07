@@ -61,15 +61,7 @@
   font-weight: 700;
 }
 
-.article-content p,
-.article-content img,
-.article-content iframe,
-.article-content ul,
-.article-content ol,
-h1,
-h2,
-h3,
-h4 {
+.article-content :is(p, img, iframe, ul, ol, h1, h2, h3, h4) {
   @apply max-w-full mt-6;
 }
 
