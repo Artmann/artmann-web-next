@@ -185,8 +185,8 @@ export default function ProjectsPage(): ReactElement {
           <h1 className="text-3xl mb-4">Projects</h1>
 
           <p>
-            I like to build stuff. 😊 So here's a list of things that I've
-            helped build. 🚀
+            I like to build stuff. 😊 So here&apos;s a list of things that
+            I&apos;ve helped build. 🚀
           </p>
         </div>
 

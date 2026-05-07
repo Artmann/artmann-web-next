@@ -22,7 +22,7 @@ class ArticleService {
     return `/articles/${slug}`
   }
 
-  getSlug(article): string {
+  getSlug(article: Article): string {
     const slug = paramCase(article.title)
 
     return slug

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Inter, Poppins } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense, type ReactNode } from 'react'
 
@@ -8,6 +9,20 @@ import { PageViewTracker } from './_components/page-view-tracker'
 
 import 'highlight.js/styles/github-dark-dimmed.min.css'
 import '../styles/globals.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap'
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-poppins',
+  display: 'swap'
+})
 
 export const metadata: Metadata = {
   title: 'Christoffer Artmann',
@@ -21,30 +36,14 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
-  children
-}: {
-  children: ReactNode
-}): ReactNode {
+export default function RootLayout({ children }: LayoutProps<'/'>): ReactNode {
   const isProduction = process.env.NODE_ENV === 'production'
 
   return (
-    <html lang="en">
-      <head>
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Special+Elite&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="en"
+      className={`${inter.variable} ${poppins.variable}`}
+    >
       <body className="text-gray-700 antialiased">
         {isProduction && trackingId && (
           <>

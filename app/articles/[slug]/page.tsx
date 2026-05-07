@@ -10,8 +10,6 @@ import { renderMarkdown } from '../../../lib/article-service/render-markdown'
 import { parseDate } from '../../../lib/date'
 import { ArticleClientEffects } from './article-client-effects'
 
-type Params = Promise<{ slug: string }>
-
 export async function generateStaticParams() {
   const articles = await loadArticles()
 
@@ -20,9 +18,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata(props: {
-  params: Params
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: PageProps<'/articles/[slug]'>
+): Promise<Metadata> {
   const { slug } = await props.params
   const articles = await loadArticles()
   const article = articles.find((a) => articleService.getSlug(a) === slug)
@@ -53,9 +51,9 @@ export async function generateMetadata(props: {
   }
 }
 
-export default async function ArticlePage(props: {
-  params: Params
-}): Promise<ReactElement> {
+export default async function ArticlePage(
+  props: PageProps<'/articles/[slug]'>
+): Promise<ReactElement> {
   const { slug } = await props.params
   const articles = await loadArticles()
   const article = articles.find((a) => articleService.getSlug(a) === slug)

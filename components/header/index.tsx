@@ -33,7 +33,7 @@ export default function Header({ color = true }: HeaderProps): ReactElement {
           <Link
             className="text-sm font-semibold"
             href="/"
-            style={{ fontFamily: 'Poppins' }}
+            style={{ fontFamily: 'var(--font-poppins)' }}
           >
             Christoffer Artmann
           </Link>
