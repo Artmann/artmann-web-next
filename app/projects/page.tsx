@@ -90,6 +90,16 @@ const techDot: Record<string, string> = {
 
 const projects: Project[] = [
   {
+    name: 'Spanish Bear',
+    tagline: 'Learn and practice Spanish, one bite at a time.',
+    description:
+      'A friendly home for picking up Spanish — short lessons, interactive practice, and just enough structure to keep you coming back. Built for self-taught learners who want to actually speak the language, not just memorize flashcards.',
+    tech: ['TypeScript', 'Next.js', 'React'],
+    accent: 'burgundy',
+    size: 'featured',
+    homepage: 'https://spanishbear.com/'
+  },
+  {
     name: 'Pull Panda',
     tagline: 'A native-feeling home for code review.',
     description:
