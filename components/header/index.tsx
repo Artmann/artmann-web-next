@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import React, { ReactElement } from 'react'
 
+import ParticleField from '../delight/particle-field'
+
 interface HeaderProps {
   color?: boolean
 }
@@ -16,13 +18,24 @@ export default function Header({ color = true }: HeaderProps): ReactElement {
         z-20
         text-white
       `}
+      id="site-header"
       style={{
         backdropFilter: 'blur(24px)',
         backgroundColor: color ? 'rgba(113, 34,47, 0.95)' : 'transparent'
       }}
     >
+      {color && (
+        <ParticleField
+          className="absolute inset-0 h-full w-full"
+          count={3}
+          mode="embers"
+          scale={0.6}
+        />
+      )}
+
       <div
         className={`
+          relative z-10
           w-full
           flex items-center
           max-w-4xl

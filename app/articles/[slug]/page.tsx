@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation'
 import type { ReactElement } from 'react'
 
 import Container from '../../../components/container'
+import MarginCompanions from '../../../components/delight/margin-companions'
+import ReachedCamp from '../../../components/delight/reached-camp'
+import ReadingProgress from '../../../components/delight/reading-progress'
 import Header from '../../../components/header'
 import { articleService } from '../../../lib/article-service'
 import { loadArticles } from '../../../lib/article-service/article-loader'
@@ -68,8 +71,12 @@ export default async function ArticlePage(
     <>
       <Header />
 
+      <ReadingProgress />
+
+      <MarginCompanions />
+
       <Container>
-        <article className="w-full text-gray-800 leading-loose pt-8 space-y-8">
+        <article className="w-full text-gray-800 leading-loose pt-16 md:pt-24 space-y-8">
           <header className="space-y-3">
             <h1 className="text-2xl md:text-3xl font-semibold">
               {article.title}
@@ -89,9 +96,11 @@ export default async function ArticlePage(
           />
 
           <div
-            className="article-content text-base leading-relaxed text-gray-900 pb-16 md:pb-32"
+            className="article-content text-base leading-relaxed text-gray-900 pb-8 md:pb-16"
             dangerouslySetInnerHTML={{ __html: html }}
           ></div>
+
+          <ReachedCamp />
         </article>
 
         <ArticleClientEffects

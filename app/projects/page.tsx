@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import type { ReactElement } from 'react'
 import { FiArrowUpRight, FiGithub } from 'react-icons/fi'
 
+import PeaksGlyph from '../../components/delight/peaks-glyph'
+import RangerBadge from '../../components/delight/ranger-badge'
 import Footer from '../../components/footer'
 import Header from '../../components/header'
 
@@ -24,7 +26,10 @@ interface Project {
   homepage?: string
 }
 
-const accentStyles: Record<Accent, { stripe: string; glow: string; text: string }> = {
+const accentStyles: Record<
+  Accent,
+  { stripe: string; glow: string; text: string }
+> = {
   burgundy: {
     stripe: 'bg-[#71222f]',
     glow: 'from-[#71222f]/12 via-[#71222f]/4 to-transparent',
@@ -337,7 +342,9 @@ function TechBadge({ name }: { name: string }): ReactElement {
 function ProjectCard({ project }: { project: Project }): ReactElement {
   const accent = accentStyles[project.accent]
   const isLarge = project.size === 'featured' || project.size === 'tall'
-  const gitHubUrl = project.github ? `https://github.com/${project.github}` : null
+  const gitHubUrl = project.github
+    ? `https://github.com/${project.github}`
+    : null
 
   return (
     <article
@@ -347,12 +354,16 @@ function ProjectCard({ project }: { project: Project }): ReactElement {
         ${sizeClasses[project.size]}
       `}
     >
-      <div className={`absolute inset-x-0 top-0 h-1 ${accent.stripe}`} />
+      <div
+        className={`stripe-shimmer absolute inset-x-0 top-0 h-1 ${accent.stripe}`}
+      />
       <div
         className={`
+          card-glow-breathe
           pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full
           bg-gradient-to-br ${accent.glow} blur-2xl
         `}
+        style={{ animationDelay: `${(project.name.length % 5) * -1.4}s` }}
       />
 
       <div
@@ -434,16 +445,26 @@ export default function ProjectsPage(): ReactElement {
     <>
       <Header />
 
-      <div className="container mx-auto max-w-6xl p-4 pb-8 md:px-8 md:pb-8">
+      <div className="topo-texture container relative mx-auto max-w-6xl p-4 pb-8 md:px-8 md:pb-8">
+        <RangerBadge
+          className="absolute right-8 top-28 hidden -rotate-6 lg:block"
+          size={104}
+          variant="light"
+        />
+
         <div className="mb-12 max-w-2xl pt-16 md:pt-32">
-          <h1 className="brand mb-4 text-4xl text-gray-900 md:text-5xl">
+          <h1 className="brand mb-4 flex items-center gap-4 text-4xl text-gray-900 md:text-5xl">
             Things I&apos;ve built.
+            <PeaksGlyph
+              className="mt-1 text-burgundy"
+              size={34}
+            />
           </h1>
 
           <p className="text-lg text-gray-600">
             A grab-bag of products, side projects, and small open-source
-            libraries — from full apps with real users to the tiny
-            utilities that quietly keep things running.
+            libraries — from full apps with real users to the tiny utilities
+            that quietly keep things running.
           </p>
         </div>
 
