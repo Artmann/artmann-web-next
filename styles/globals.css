@@ -287,6 +287,17 @@
   @apply font-mono p-5 overflow-x-auto break-all mt-2;
 }
 
+/* highlight.js ships github-dark-dimmed (imported in app/layout.tsx) whose own
+   .hljs rule sets a background, colour, and padding. Inside the pre that paints
+   a second, differently coloured box inset by the pre's padding. Only the token
+   colours from that theme are wanted, and the Catppuccin rules below replace
+   those anyway. */
+.article-content pre code.hljs {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
 /* Catppuccin Frappe syntax highlighting */
 .article-content pre .hljs-keyword,
 .article-content pre .hljs-variable,
