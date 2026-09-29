@@ -116,6 +116,16 @@ const projects: Project[] = [
     github: 'Artmann/pull-panda-desktop'
   },
   {
+    name: 'Tiny Plates',
+    tagline: 'A recipe API your AI agent can cook with.',
+    description:
+      'Structured recipes for developers and agents, served over an API and an MCP server. Search by meaning, find what you can cook from your pantry, scale servings, convert units, swap ingredients, and turn a week of meals into one shopping list grouped by aisle.',
+    tech: ['TypeScript', 'MCP', 'AI'],
+    accent: 'ochre',
+    size: 'tall',
+    homepage: 'https://www.tinyplates.dev/'
+  },
+  {
     name: 'Esix',
     tagline: 'A really slick MongoDB ORM for TypeScript.',
     description:
